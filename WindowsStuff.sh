@@ -12,4 +12,8 @@ value: "C:/Program Files/putty/plink.exe"  -i C:/cygwin/home/<username>/.ssh/put
 ### a named host, i.e. if "myhost" is at 192.168.56.7 
 192.168.56.7 myhost
 
+### Pipe the ipconfig output through the 'more' pager
+ipconfig | more
 
+### Pipe the netstat output to the "find string" (findstr) program, searching for port 445
+netstat -ano | findstr :445
