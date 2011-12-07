@@ -6,6 +6,11 @@ git commit -a -m "Updated <something> with <some changes>"
 git push
 ### Pull updates from the server
 git pull
+### Rename a file
+git mv OldFileName.css NewFileName.css
+### Don't forget to commit the changes...
+git commit -a -m "Renamed OldFileName.css to NewFileName.css"
+
 
 ### Install something with apt:
 sudo apt-get install <thing to install>
