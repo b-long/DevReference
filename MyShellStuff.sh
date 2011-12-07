@@ -26,7 +26,7 @@ find / -iname "hadoop"
 locate "hadoop"  
 
 ### Post a message to all terminals logged on, possibly for service/application notifications
-wall "Shutting down my awesome app.!"
+wall "Shutting down (some) application, web server, databse or service!"
 
 ### Locall netstat related to a specific port
 netstat -antp |grep :22 
