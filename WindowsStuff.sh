@@ -17,3 +17,6 @@ ipconfig | more
 
 ### Pipe the netstat output to the "find string" (findstr) program, searching for port 445
 netstat -ano | findstr :445
+
+### Trace the network route from a given machine to another
+tracert google.com
