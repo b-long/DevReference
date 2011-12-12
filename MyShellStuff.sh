@@ -40,7 +40,7 @@ netstat -antp |grep :22
 netstat -antp | grep 172.16.10.21
 
 ### Network settings for a given interface, i.e. "p2p1"
-vi /etc/cysconfig/network-scripts/ifcfg-p7p1
+vi /etc/sysconfig/network-scripts/ifcfg-p7p1
 
 ### Check if ZooKeeper is ok
 echo ruok | nc <host> <zookeeper-port>
