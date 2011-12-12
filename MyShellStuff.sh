@@ -25,6 +25,8 @@ shutdown now -h
 
 ### To find/locate a file in a directory
 find <directory> -iname "<case-insensitive filename>"
+### To find all the .war files in your current directory
+find ./ -name "*.war"
 ### For example, searching from the root of the filesystem:
 find / -iname "hadoop"
 ### Alternatively, locate which is based on a pre-built database
