@@ -1,4 +1,14 @@
-### First and foremost some Git commands
+### First and foremost some bash stuff!
+### From the user's $home directory ('cd <blank>')
+### Update the ~/.bash_profile
+### Add useful aliases, like:
+alias lp='cd ~/mylongpathname/subdirectory/subdirectory/'
+### Now the 'cd' can be invoked with just 'lp'
+### If you want to use the updated ~/.bash_profile immediately
+### From the home directory, run:
+source .bash_profile
+
+### Some Git stuff...
 ###
 ### Commit all changes (modified files) with message <-m>
 git commit -a -m "Updated <something> with <some changes>"
