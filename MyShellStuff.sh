@@ -40,8 +40,6 @@ find ./ -name "*.war"
 ### To find all the .war files in your current directory (i.e. dev machine)
 ###   and then copy them to some server (i.e. qa) for testing
 scp $(find . -name "*.war") user@qa-server:/srv/apache-tomcat-x.y.zz/webapps/
-### Version 2, even better!
-scp $(find . -name "*.war") > 1 ? user@qa-server:/srv/apache-tomcat-x.y.zz/webapps/ : print "NOTHING FOUND";
 ### For example, searching from the root of the filesystem:
 find / -iname "hadoop"
 ### Alternatively, locate which is based on a pre-built database
