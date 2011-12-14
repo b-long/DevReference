@@ -20,3 +20,6 @@ netstat -ano | findstr :445
 
 REM Trace the network route from a given machine to another
 tracert google.com
+
+REM Print the contents of a file
+type myFile.txt
