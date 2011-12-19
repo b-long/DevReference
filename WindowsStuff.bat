@@ -5,7 +5,7 @@ REM With an environment variable (used by some svn clients) the same can be acco
 key:   SVN_SSH
 value: "C:/Program Files/putty/plink.exe"  -i C:/cygwin/home/<username>/.ssh/putty.ppk -l <username>
 
-REM For development purposes, you may need to edit your 'hosts' file.
+: For development purposes, you may need to edit your 'hosts' file.
 REM On Windows, it's location is C:\Windows\System32\drivers\etc\hosts
 REM The file can only be modified by administrator, so Shift+Right-click 
 REM and open an editor (Notepad++) as Administrator.  Then you can add
