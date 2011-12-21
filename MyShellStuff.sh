@@ -64,6 +64,10 @@ echo ruok | nc <host> <zookeeper-port>
 ### Remember, the syntax is scp <from> <to>
 scp /cygdrive/c/<somepath>/*.war root@<somehost>:/<somepath>/
 
+### Perform multiple operations (i.e. moving things) after SSH'ing in
+### This example is specific to Jenkins (using $SVN_REVISION)
+ssh root@host.com "cd /root/myBuilds/; mkdir ${SVN_REVISION}; mv /root/myBuilds/temp/ /root/builds/${SVN_REVISION}/"
+
 ### To secure copy a file, from Windows host (in Cygwin) to Linux VM
 ### Given the following: Ethernet adapter VirtualBox Host-Only Network:
 ### 
