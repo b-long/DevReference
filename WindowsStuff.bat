@@ -23,3 +23,6 @@ tracert google.com
 
 REM Print the contents of a file
 type myFile.txt
+
+REM To create an alias for Windows command processor, follow this guide:
+http://superuser.com/questions/49170/create-an-alias-in-windows-xp#answer-115259
