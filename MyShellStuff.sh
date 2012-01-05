@@ -131,7 +131,7 @@ ls
 ### Including environment stuff...
 cat environ
 
-### In a bourne shell (bash) you can set environment variables like this
+### In a bourne again shell (bash) you can set environment variables like this
 JAVA_HOME=/usr/java/jdk1.6.0_26/
 export JAVA_HOME
 ### Then double-check that it got set properly
