@@ -3,6 +3,7 @@
 ### Explanation of the first line
 # TODO: insert explanation...
 
+###
 ### BASH
 ###
 # Change to the users's $home directory ('cd <blank>')
@@ -18,6 +19,7 @@ alias lpn='cd ~/mylongpathname/subdirectory/subdirectory/'
 # From the home directory, run:
 source .bash_profile
 
+###
 ### GIT
 ###
 # Commit all changes (modified files) with message <-m>
@@ -31,13 +33,19 @@ git mv OldFileName.css NewFileName.css
 # Don't forget to commit the changes...
 git commit -a -m "Renamed OldFileName.css to NewFileName.css"
 
-### Install something with apt:
+###
+### OS information
+###
+#To query the Linux Standard Base system (modern distros) for system info:
+lsb_release -d / -a
+
+### Software / package management
+# Install something with apt:
 sudo apt-get install <thing to install>
-### Install something with yum:
+# Install something with yum:
 sudo yum install <thing to install>
 
-### To query the Linux Standard Base system (modern distros) for system info:
-lsb_release -d / -a
+
 
 ### To shutdown the system immediately and halt (-h)
 shutdown now -h
