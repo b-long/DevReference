@@ -5,7 +5,7 @@ REM With an environment variable (used by some svn clients) the same can be acco
 key:   SVN_SSH
 value: "C:/Program Files/putty/plink.exe"  -i C:/cygwin/home/<username>/.ssh/putty.ppk -l <username>
 
-REM       Subversion on the command line:
+REM       Subversion on the command line (via http://svnbook.red-bean.com/en/1.6/svn-book.html )
 : The simplest update 'svn up' or 'svn update'
 svn up
 
