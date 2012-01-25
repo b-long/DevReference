@@ -6,17 +6,17 @@ key:   SVN_SSH
 value: "C:/Program Files/putty/plink.exe"  -i C:/cygwin/home/<username>/.ssh/putty.ppk -l <username>
 
 REM       Subversion on the command line (via http://svnbook.red-bean.com/en/1.6/svn-book.html )
-: The simplest update 'svn up' or 'svn update'
+:: The simplest update 'svn up' or 'svn update'
 svn up
 
-: Print the status of working copy files and directories.
+:: Print the status of working copy files and directories.
 svn status
 
-: Print the status of working copy files and directories.
-:   --show-updates (or -u) Causes the client to display information about which files in your working copy 
-: are out of date.  This doesn't actually update any of your files—it just shows you which files will be 
-: updated if you then use svn update.
-:
+:: Print the status of working copy files and directories.
+::   --show-updates (or -u) Causes the client to display information about which files in your working copy 
+:: are out of date.  This doesn't actually update any of your files—it just shows you which files will be 
+:: updated if you then use svn update.
+::
 svn status -u
 
 
