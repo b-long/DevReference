@@ -42,3 +42,6 @@ type myFile.txt
 
 REM To create an alias for Windows command processor, follow this guide:
 http://superuser.com/questions/49170/create-an-alias-in-windows-xp#answer-115259
+
+REM To exit a batch script (but remain in the command proccessor): 
+exit /b 0
