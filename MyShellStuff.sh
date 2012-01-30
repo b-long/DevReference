@@ -34,21 +34,23 @@ git mv OldFileName.css NewFileName.css
 git commit -a -m "Renamed OldFileName.css to NewFileName.css"
 
 ###
-### OS information
+### OS INFORMATION
 ###
 #To query the Linux Standard Base system (modern distros) for system info:
 lsb_release -d / -a
 
-### Software / package management
+## Software / package management
 # Install something with apt:
 sudo apt-get install <thing to install>
 # Install something with yum:
 sudo yum install <thing to install>
 
-
-
-### To shutdown the system immediately and halt (-h)
+# To shutdown the system immediately and halt (-h)
 shutdown now -h
+# To shutdown the system in 3 hours and halt
+shutdown 03:00 -h
+# To reboot
+reboot
 
 # To find/locate a file in a directory
 find <directory> -iname "<case-insensitive filename>"
@@ -85,15 +87,10 @@ scp /cygdrive/c/<somepath>/*.war root@<somehost>:/<somepath>/
 # This example is specific to Jenkins (using $SVN_REVISION)
 ssh root@host.com "cd /root/myBuilds/; mkdir ${SVN_REVISION}; mv /root/myBuilds/temp/ /root/builds/${SVN_REVISION}/"
 
-# To secure copy a file, from Windows host (in Cygwin) to Linux VM
-# Given the following: Ethernet adapter VirtualBox Host-Only Network:
-# 
-#    Connection-specific DNS Suffix  . :
-# Link-local IPv6 Address . . . . . : fe80::f965:2c4b:370f:ec25%36
-# IPv4 Address. . . . . . . . . . . : 192.168.56.1
-# Subnet Mask . . . . . . . . . . . : 255.255.255.0
-# Default Gateway . . . . . . . . . :
-#
+# To recursively copy an entire directory:
+scp -r user@host:/path/directoryToCopy /cygdrive/c/windows-path/parentDestinationDirectory/
+
+# Secure copy from a Cygwin path
 scp /cygdrive/c/<path-to-soruce>/myFile.txt <user>@192.168.56.1:/<destination path>/
 
 # Remember to check the permissions on the file afterward and maybe change them...
@@ -102,8 +99,6 @@ chmod 777 myFile.txt
 # You can also change permissions a bit more verbosely
 chmod u=rwx,g=r,o=r myApplication.jar
 
-# To recursively copy an entire directory:
-scp -r user@host:/path/directoryToCopy /cygdrive/c/windows-path/parentDestinationDirectory/
 
 # Determine the size (disk usage) of a directory or file:
 du /srv/apache-tomcat-7.0.22/ -h --max-depth=1 |sort -n -r
