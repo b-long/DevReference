@@ -130,6 +130,11 @@ tar -xvf myFile.tar
 # Unzip gzip file
 tar -xvfz myFile.tar.gz
 
+###
+### The power of GREP! ( "Global Regular-Expression Print" )
+###
+# Find some <pattern> and print the 5 lines after (-A) it.
+man grep | grep -A5 -- "-A"
 # Get process information (i.e. for Apache Tomcat)
 ps -ef |grep tomcat ### For this example, tomcat's PID is 13763
 # Get everyone's (-e) long (-l), full (-f), wide, 
