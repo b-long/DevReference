@@ -52,6 +52,12 @@ shutdown 03:00 -h
 # To reboot
 reboot
 
+###
+### SSH Stuff
+###
+#Setup passwordless ssh for server A to server B
+a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
+
 # To find/locate a file in a directory
 find <directory> -iname "<case-insensitive filename>"
 # To find all the .war files in your current directory
