@@ -58,6 +58,8 @@ reboot
 #Setup passwordless ssh for server A to server B
 a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
 
+
+
 # To find/locate a file in a directory
 find <directory> -iname "<case-insensitive filename>"
 # To find all the .war files in your current directory
@@ -68,13 +70,13 @@ scp $(find . -name "*.war") user@qa-server:/srv/apache-tomcat-x.y.zz/webapps/
 # For example, searching from the root of the filesystem:
 find / -iname "hadoop"
 # Alternatively, locate which is based on a pre-built database
-locate "hadoop"  
+locate "hadoop"
 
 # Post a message to all terminals logged on, possibly for service/application notifications
 wall "Shutting down (some) application, web server, databse or service!"
 
 # Locall netstat related to a specific port
-netstat -antp |grep :22 
+netstat -antp |grep :22
 
 # netstat related to a certain IP address:
 netstat -antp | grep 172.16.10.21
@@ -141,6 +143,7 @@ tar -xvfz myFile.tar.gz
 ###
 # Find some <pattern> and print the 5 lines after (-A) it.
 man grep | grep -A5 -- "-A"
+
 # Get process information (i.e. for Apache Tomcat)
 ps -ef |grep tomcat ### For this example, tomcat's PID is 13763
 # Get everyone's (-e) long (-l), full (-f), wide, 
