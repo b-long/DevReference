@@ -21,9 +21,10 @@ svn status -u
 
 :: I think this is right...   Update (as revert, -r) to some specified revision
 svn update -r HEAD
-
 svn update -r 1190
 
+:: remove unversioned files 
+http://stackoverflow.com/questions/2803823/how-can-i-delete-all-unversioned-ignored-files-folders-in-my-working-copy
 
 
 : For development purposes, you may need to edit your 'hosts' file.
