@@ -112,6 +112,7 @@ chmod u=rwx,g=r,o=r myApplication.jar
 du /srv/apache-tomcat-7.0.22/ -h --max-depth=1 |sort -n -r
 
 # To mount a VirtualBox shared folder, named "shared-linux", use the following:
+mkdir /home/<user>/shared-linux # Be sure to have the mount point made
 mount -t vboxsf shared-linux /home/<user>/shared-linux
 
 # To uninstall software (verbosely) with RPM.
