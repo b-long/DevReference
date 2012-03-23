@@ -84,7 +84,14 @@ netstat -antp | grep 172.16.10.21
 # Network settings for a given interface, i.e. "p2p1"
 vi /etc/sysconfig/network-scripts/ifcfg-p7p1
 
-# Check if ZooKeeper is ok
+# Enable ports in IP tables for Accumulo
+iptables -I LOCAL-INPUT 10 -p tcp --dport 9999 -j ACCEPT
+iptables -I LOCAL-INPUT 10 -p tcp --dport 9997 -j ACCETP
+
+# Save iptables
+service iptables save
+
+# Check if ZooKeeper is up
 echo ruok | nc <host> <zookeeper-port>
 
 # To secure copy (copy over ssh) use 'scp'
