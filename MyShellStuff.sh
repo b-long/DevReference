@@ -171,6 +171,16 @@ export JAVA_HOME
 printenv | grep java
 
 
+# New stuff!
+echo $(cygpath -w /cygdrive/c) # Some windows command, also cygpath to convert to a Windows path
+echo `cygpath -w /cygdrive/c` # Same as above, but with tick marks
+dir "$(cygpath -w /cygdrive/c/Program\ Files\ \(x86\)/)" # Same as above, but looking at Program Files
+
+# Tar pipe
+tar -c /stuff/* | ssh <host> tar -x
+# Can be reversed as well
+
+
 # Bookmarks
 # Sun Java on Ubuntu
 https://help.ubuntu.com/community/Java#Installing_Sun_Java_from_the_command_line
