@@ -1,11 +1,11 @@
-REM In Subversion config, i.e. %APPDATA%\Subversion\config, -v is for verbose
+:: In Subversion config, i.e. %APPDATA%\Subversion\config, -v is for verbose
 ssh = C:/Program Files/putty/plink.exe -v -i C:/cygwin/home/<username>/.ssh/putty.ppk -l <username>
 
-REM With an environment variable (used by some svn clients) the same can be accomplished
+:: With an environment variable (used by some svn clients) the same can be accomplished
 key:   SVN_SSH
 value: "C:/Program Files/putty/plink.exe"  -i C:/cygwin/home/<username>/.ssh/putty.ppk -l <username>
 
-REM       Subversion on the command line (via http://svnbook.red-bean.com/en/1.6/svn-book.html )
+:: Subversion on the command line (via http://svnbook.red-bean.com/en/1.6/svn-book.html )
 :: The simplest update 'svn up' or 'svn update'
 svn up
 
