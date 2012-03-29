@@ -1,7 +1,9 @@
 #!/bin/bash
+# TODO: Explain shebang & #!/bin/sh
 
-### Explanation of the first line
-# TODO: insert explanation...
+# TODO: insert Explanations & table of contents...
+
+
 
 ###
 ### BASH
@@ -32,6 +34,9 @@ git pull
 git mv OldFileName.css NewFileName.css
 # Don't forget to commit the changes...
 git commit -a -m "Renamed OldFileName.css to NewFileName.css"
+# Git workflows:
+http://schacon.github.com/git/gitworkflows.html
+
 
 ###
 ### OS INFORMATION
@@ -186,3 +191,6 @@ tar -c /stuff/* | ssh <host> tar -x
 https://help.ubuntu.com/community/Java#Installing_Sun_Java_from_the_command_line
 # Oracle on Ubuntu
 https://help.ubuntu.com/community/Oracle
+# Advanced bash scripting guide:
+http://tldp.org/LDP/abs/html/
+
