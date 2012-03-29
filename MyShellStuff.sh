@@ -111,7 +111,7 @@ ssh root@host.com "cd /root/myBuilds/; mkdir ${SVN_REVISION}; mv /root/myBuilds/
 scp -r user@host:/path/directoryToCopy /cygdrive/c/windows-path/parentDestinationDirectory/
 
 # Secure copy from a Cygwin path
-scp /cygdrive/c/<path-to-soruce>/myFile.txt <user>@192.168.56.1:/<destination path>/
+scp /cygdrive/c/<path-to-soruce>/myFile.txt <user>@<host>:/<destination path>/
 
 # Remember to check the permissions on the file afterward and maybe change them...
 chmod 777 myFile.txt
