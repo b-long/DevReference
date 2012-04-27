@@ -1,8 +1,13 @@
 #!/bin/bash
 # TODO: Explain shebang & #!/bin/sh
 
-# TODO: insert Explanations & table of contents...
+# TODO: Insert Explanations & table of contents...
+# TODO: Extract each command to it's own file inside this project, that way it serves as "my own man/info page".
 
+### INFO
+# To quit --> Ctrl + x , Ctrl + c
+# It's better than man...
+info test
 
 
 ###
@@ -152,10 +157,16 @@ tar -xvf myFile.tar
 tar -xvfz myFile.tar.gz
 
 ###
-### The power of GREP! ( "Global Regular-Expression Print" )
+### GREP! ( "Global Regular-Expression Print" )
 ###
 # Find some <pattern> and print the 5 lines after (-A) it.
 man grep | grep -A5 -- "-A"
+grep -nIre <RegEx> <Path>
+# Usage: 
+# Pipe the output of looking for this pattern to grep and skip all the logs
+grep -nIre 192\.168\. *|grep -v \.log
+# Bookmark http://www.regular-expressions.info
+
 
 # Get process information (i.e. for Apache Tomcat)
 ps -ef |grep tomcat ### For this example, tomcat's PID is 13763
@@ -185,6 +196,27 @@ dir "$(cygpath -w /cygdrive/c/Program\ Files\ \(x86\)/)" # Same as above, but lo
 tar -c /stuff/* | ssh <host> tar -x
 # Can be reversed as well
 
+### Netcat to see if some arbitrary port (22 here) is listening for connections on some host
+nc -v -w 1 localhost -z 22
+
+### Check if ssh is up
+while (nc -v -w 1 localhost -z 22);
+do
+  echo "SSH is up"
+  sleep 1
+done
+
+while (nc -v -w 1 localhost -z 22; test ! "$?" = "0");
+do
+  echo "SSH is down"
+  sleep 1
+done
+
+### Top starts the program.
+### Afterwards: 
+### Shift + o   --> (order by)
+### n           --> (Memory usage)
+top
 
 # Bookmarks
 # Sun Java on Ubuntu
