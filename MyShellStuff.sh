@@ -218,6 +218,14 @@ done
 ### n           --> (Memory usage)
 top
 
+
+### Random history
+ps aux |grep jboss
+watch -n 1 ps aux \|grep jboss
+man signal
+man kill
+kill -s SIGHUP 29223
+
 # Bookmarks
 # Sun Java on Ubuntu
 https://help.ubuntu.com/community/Java#Installing_Sun_Java_from_the_command_line
