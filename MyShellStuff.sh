@@ -61,6 +61,9 @@ shutdown now -h
 shutdown 03:00 -h
 # To reboot
 reboot
+# Determine which version of linux
+cat /etc/*-release
+
 
 ###
 ### SSH Stuff
