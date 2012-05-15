@@ -135,13 +135,17 @@ du /srv/apache-tomcat-7.0.22/ -h --max-depth=1 |sort -n -r
 mkdir /home/<user>/shared-linux # Be sure to have the mount point made
 mount -t vboxsf shared-linux /home/<user>/shared-linux
 
-# To uninstall software (verbosely) with RPM.
-# For example, to remove the MySQL client:
-rpm -ev MySQL-client
+###
+### RPM stuff
+###
 # View contents of rpm
 rpm -qlp file.rpm
 # Install rpm
-rpm –ivh file.rpm
+rpm –ivh <file name>.rpm
+# To uninstall software (verbosely) the RPM that was just installed.
+rpm -ev <file name>  ### Note, the extension is not included in this case
+# To uninstall other packages, for example the MySQL client:
+rpm -ev MySQL-client
 
 # See the last 50 lines of the authorization log 
 # From https://help.ubuntu.com/community/LinuxLogFiles
