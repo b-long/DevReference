@@ -140,6 +140,8 @@ mount -t vboxsf shared-linux /home/<user>/shared-linux
 rpm -ev MySQL-client
 # View contents of rpm
 rpm -qlp file.rpm
+# Install rpm
+rpm –ivh file.rpm
 
 # See the last 50 lines of the authorization log 
 # From https://help.ubuntu.com/community/LinuxLogFiles
