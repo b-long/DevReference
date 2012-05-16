@@ -42,6 +42,15 @@ git commit -a -m "Renamed OldFileName.css to NewFileName.css"
 # Git workflows:
 http://schacon.github.com/git/gitworkflows.html
 
+###
+### Maven
+###
+# Install my service module, building and installing persistence and common code first
+# cd to the services directory
+mvn -pl team:project-commons,team:project-persistence install
+# Package this module and then scp the .war's to deploy on a jboss server
+mvn package && scp $(find . -name "*.war") <user>@<host name>:/srv/jboss-6.0.0/server/default/deploy/
+
 
 ###
 ### OS INFORMATION
