@@ -50,8 +50,6 @@ http://schacon.github.com/git/gitworkflows.html
 mvn -pl team:project-commons,team:project-persistence,team:project-services install
 # Package this module and then scp the .war's to deploy on a jboss server
 mvn package && scp $(find . -name "*.war") <user>@<host name>:/srv/jboss-6.0.0/server/default/deploy/
-# Clean & rebuild everything, then run 1 integration test
-mvn -Dtest=MyTestIT clean package verify
 # Clean & rebuild everything, then run 1 integration test class
 mvn -Dtest=MyTestIT clean package verify
 # Run 1 unit test
