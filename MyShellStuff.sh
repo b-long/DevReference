@@ -81,10 +81,11 @@ cat /etc/*-release
 ###
 ### SSH Stuff
 ###
-#Setup passwordless ssh for server A to server B
+# Setup passwordless ssh for server A to server B
 a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
 
-
+# Print the welcom/message of the day after you're already logged in
+cat /etc/issue
 
 # To find/locate a file in a directory
 find <directory> -iname "<case-insensitive filename>"
