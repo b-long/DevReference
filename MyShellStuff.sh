@@ -141,6 +141,8 @@ chmod 777 myFile.txt
 # You can also change permissions a bit more verbosely
 chmod u=rwx,g=r,o=r myApplication.jar
 
+# Change permissions on an entire directory
+chmod -R 755 /path/to/directory
 
 # Determine the size (disk usage) of a directory or file:
 du /srv/apache-tomcat-7.0.22/ -h --max-depth=1 |sort -n -r
