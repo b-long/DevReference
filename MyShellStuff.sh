@@ -186,13 +186,15 @@ tar -xvfz myFile.tar.gz
 ###
 ### GREP! ( "Global Regular-Expression Print" )
 ###
+# Bookmark http://www.regular-expressions.info
 # Find some <pattern> and print the 5 lines after (-A) it.
 man grep | grep -A5 -- "-A"
 grep -nIre <RegEx> <Path>
 # Usage: 
 # Pipe the output of looking for this pattern to grep and skip all the logs
 grep -nIre 192\.168\. *|grep -v \.log
-# Bookmark http://www.regular-expressions.info
+# Find some text in any file in a directory
+grep <text to find> /path/to/directory/*
 
 
 # Get process information (i.e. for Apache Tomcat)
