@@ -2,7 +2,7 @@
 #
 # TODO: Explain shebang & #!/bin/sh
 #
-# Other thoughts:#
+# Other thoughts:
 # TODO: Insert Explanations & table of contents...
 # 
 # TODO: Consider extracting commands to their own file inside this project.  Then the project would serve as
