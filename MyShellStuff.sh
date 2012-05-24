@@ -1,8 +1,12 @@
 #!/bin/bash
+#
 # TODO: Explain shebang & #!/bin/sh
-
+#
+# Other thoughts:#
 # TODO: Insert Explanations & table of contents...
-# TODO: Extract each command to it's own file inside this project, that way it serves as "my own man/info page".
+# 
+# TODO: Consider extracting commands to their own file inside this project.  Then the project would serve as
+# a supplement to man and info pages
 
 ### INFO
 # To quit --> Ctrl + x , Ctrl + c
