@@ -17,7 +17,7 @@ info test
 ###
 ### BASH
 ###
-# Change to the users's $home directory ('cd <blank>')
+# Change to the users's $home directory ('cd <space>')
 cd ; # Semicolon isn't needed, just hit return after a space
 
 # The .bash_profile (in the home directory) can 
