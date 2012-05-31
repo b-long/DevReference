@@ -46,8 +46,11 @@ tracert google.com
 REM Print the contents of a file
 type myFile.txt
 
-REM To create an alias for Windows command processor, follow this guide:
-http://superuser.com/questions/49170/create-an-alias-in-windows-xp#answer-115259
+REM There are a few different ways to create "aliases" for the Windows command processor.  
+REM Currently, I'm using this method:
+http://superuser.com/a/115259/102047
+REM This option also looks pretty good:
+http://superuser.com/a/49194/102047
 
 REM ** Case usually doesn't matter **
 REM   Batch commands are usually NOT case sensitive.  Therefore, `exit /b 0` and 'exit /B 0'
