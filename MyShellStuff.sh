@@ -51,7 +51,12 @@ http://schacon.github.com/git/gitworkflows.html
 ###
 # Install my service module, building and installing persistence and common code first
 # cd to the top of the multi-module project 
-mvn -pl team:project-commons,team:project-persistence,team:project-services install
+mvn -pl group:project-commons,group:project-persistence,group:project-services install
+# Or, a bit shorter version
+mvn -pl group:project-persistence -am install
+# The reverse (build & install persistence & everything that depends on it)
+mvn -pl group:project-persistence -amd install
+
 # Package this module and then scp the .war's to deploy on a jboss server
 mvn package && scp $(find . -name "*.war") <user>@<host name>:/srv/jboss-6.0.0/server/default/deploy/
 # Clean & rebuild everything, then run 1 integration test class
