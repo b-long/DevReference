@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 #
-# TODO: Explain shebang & #!/bin/sh
+# TODO: Explain shebang (preffered and difference with #!/bin/bash)
 #
 # Other thoughts:
 # TODO: Insert Explanations & table of contents...
@@ -200,6 +200,10 @@ grep -nIre 192\.168\. *|grep -v \.log
 # Find some text in any file in a directory
 grep <text to find> /path/to/directory/*
 
+# Grep processes and look for some term in the full command line
+# pgrep -fl <term>
+# i.e.
+pgrep -fl apache
 
 # Get process information (i.e. for Apache Tomcat)
 ps -ef |grep tomcat ### For this example, tomcat's PID is 13763
