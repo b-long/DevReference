@@ -159,8 +159,13 @@ chmod u=rwx,g=r,o=r myApplication.jar
 # Change permissions on an entire directory
 chmod -R 755 /path/to/directory
 
+###
+### `du' (Disk Usage)
+###
 # Determine the size (disk usage) of a directory or file:
 du /srv/apache-tomcat-7.0.22/ -h --max-depth=1 |sort -n -r
+# Determine the size of each directory within a directory
+cd /path/to/parent/directory && du -sh *
 
 # To mount a VirtualBox shared folder, named "shared-linux", use the following:
 mkdir /home/<user>/shared-linux # Be sure to have the mount point made
