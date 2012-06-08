@@ -59,6 +59,9 @@ mvn -pl group:project-commons,group:project-persistence,group:project-services i
 mvn -pl group:project-persistence -am install
 # The reverse (build & install persistence & everything that depends on it)
 mvn -pl group:project-persistence -amd install
+# A bit more fancy, build (and install) project-services and everything 
+# it depends on, while outputting to standard out and a log file
+mvn -pl group:project-services -am install 2>&1 | tee build.log
 
 # Package this module and then scp the .war's to deploy on a jboss server
 mvn package && scp $(find . -name "*.war") <user>@<host name>:/srv/jboss-6.0.0/server/default/deploy/
