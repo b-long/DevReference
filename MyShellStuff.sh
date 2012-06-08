@@ -19,6 +19,9 @@ info test
 ###
 # Change to the users's $home directory ('cd <space>')
 cd ; # Semicolon isn't needed, just hit return after a space
+# Do something, output to standard out and pipe to a file
+find . -iname "*.pdf" 2>&1 | tee location_of_pdfs.txt
+
 
 # The .bash_profile (in the home directory) can 
 # be used for aliasing.  Edit it with vim:
