@@ -193,10 +193,10 @@ rpm -ev MySQL-client
 # From https://help.ubuntu.com/community/LinuxLogFiles
 cat -n 50 /var/log/auth.log  
 
-# Show the last 'n' lines (20 in this case) of <file>
-tail -n 20 <file>  
+# Show the last 'n' lines (37 in this case) of <file>
+tail -n 37 <file name>  
 # To follow the output
-tail -f 
+tail -f <file name>
 
 # Create (zip) a tar archive of a directory, recursively
 # First cd to the parent directory of the target directory
