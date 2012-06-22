@@ -285,11 +285,14 @@ man signal
 man kill
 kill -s SIGHUP 29223
 
-# Bookmarks
+### 
+### Bookmarks
+### 
 # Sun Java on Ubuntu
 https://help.ubuntu.com/community/Java#Installing_Sun_Java_from_the_command_line
 # Oracle on Ubuntu
 https://help.ubuntu.com/community/Oracle
 # Advanced bash scripting guide:
 http://tldp.org/LDP/abs/html/
-
+# Learning the shell
+http://linuxcommand.org/learning_the_shell.php
