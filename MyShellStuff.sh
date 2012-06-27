@@ -251,9 +251,10 @@ echo $(cygpath -w /cygdrive/c) # Some windows command, also cygpath to convert t
 echo `cygpath -w /cygdrive/c` # Same as above, but with tick marks
 dir "$(cygpath -w /cygdrive/c/Program\ Files\ \(x86\)/)" # Same as above, but looking at Program Files
 
-# Tar pipe
-tar -c /stuff/* | ssh <host> tar -x
-# Can be reversed as well
+# Tar pipe a file from one place to another
+tar -c ./myFile.txt | ssh <user>@<host>:/destination/ tar -x
+# Can be used for entire directories as well
+tar -C /path/to/parent/ -c <folder-to-copy> | ssh <user>@<host> tar -C /path/to/destination -x
 
 ### Netcat to see if some arbitrary port (22 here) is listening for connections on some host
 nc -v -w 1 localhost -z 22
