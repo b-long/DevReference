@@ -134,7 +134,7 @@ vi /etc/sysconfig/network-scripts/ifcfg-p7p1
 
 # Enable ports in IP tables for Accumulo
 iptables -I LOCAL-INPUT 10 -p tcp --dport 9999 -j ACCEPT
-iptables -I LOCAL-INPUT 10 -p tcp --dport 9997 -j ACCETP
+iptables -I LOCAL-INPUT 10 -p tcp --dport 9997 -j ACCEPT
 
 # Save iptables
 service iptables save
