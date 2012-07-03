@@ -95,7 +95,8 @@ shutdown now -h
 shutdown 03:00 -h
 # To reboot
 reboot
-# Determine which version of linux
+# Determine which version (distribution) of Linux you're using
+# This works for RedHat, Fedora, Scientifi OS, ... 
 cat /etc/*-release
 
 
