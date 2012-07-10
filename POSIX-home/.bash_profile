@@ -1,5 +1,3 @@
-
-
 # At bottom
 eval `dircolors $HOME/.dir_colors`
 
@@ -43,4 +41,10 @@ ex=01;32:\
 
 alias ll="ls -la --color=auto"
 
-
+# User specific environment and startup programs
+export JAVA_HOME=/usr/java/jdk1.6.0_33
+export JRE_HOME=/usr/java/jdk1.6.0_33/jre
+# If using Apache Maven
+PATH=$PATH:/<path to maven>/apache-maven-3/bin
+# Later on...
+export PATH
