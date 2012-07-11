@@ -48,6 +48,10 @@ git mv OldFileName.css NewFileName.css
 git commit -a -m "Renamed OldFileName.css to NewFileName.css"
 # Git workflows:
 http://schacon.github.com/git/gitworkflows.html
+# Find out what branch you're on
+git branch <no arguments>
+# Find out which tags have been created in a repository
+git tag <no arguments>
 
 ###
 ### Maven
