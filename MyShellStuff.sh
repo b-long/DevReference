@@ -52,6 +52,9 @@ http://schacon.github.com/git/gitworkflows.html
 git branch <no arguments>
 # Find out which tags have been created in a repository
 git tag <no arguments>
+# Find information about the(potentially gold copy) remote's origin.  This 
+# will also list the URL it was taken from (Fetch URL / Push URL).
+git remote show origin
 
 ###
 ### Maven
