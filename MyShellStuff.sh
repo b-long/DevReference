@@ -206,11 +206,13 @@ tail -n 37 <file name>
 # To follow the output
 tail -f <file name>
 
-# Create (zip) a tar archive of a directory, recursively
-# First cd to the parent directory of the target directory
-# Example
-# tar with gzip(-z), create an archive (-c), verbosely (-v) and give it a name (-f)
-tar -zcvf myArchiveOfDirectory.gz myDirecotry/
+# Create (zip) a tar archive of a directory, recursively.  First cd to the parent 
+# directory of the target directory.  My standard usage:
+# Create an archive (-c), verbosely (-v), using gzip (-z) and give it a name (-f)
+tar -cvzf <theArchive>.tar.gz <theFolderToArchive>
+# So, for example
+tar -cvzf myArchiveOfDirectory.gz myDirecotry/
+
 
 # Unzip tar file
 tar -xvf myFile.tar 
