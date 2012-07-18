@@ -110,8 +110,14 @@ cat /etc/*-release
 ###
 ### SSH Stuff
 ###
-# Setup passwordless ssh for server A to server B
+# For the following examples assume the current user is a@A and a remote connection b@B is available
+# Setup passwordless ssh for user `a` (on host `A`) to server `B` using user account `b`
 a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
+# Setup an SSH tunnel for the current user to some host that server B can access.  With the
+# following a user will be able to access `localhost:8888` and be tunnelled through 
+# server B to <Some computer>:8080 .  A browser can now surf to `localhost:8888` 
+ssh -L 8888:<IP address of some computer B can access>:8080 b@B
+
 
 # Print the welcom/message of the day after you're already logged in
 cat /etc/issue
