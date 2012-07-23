@@ -55,6 +55,9 @@ git tag <no arguments>
 # Find information about the(potentially gold copy) remote's origin.  This 
 # will also list the URL it was taken from (Fetch URL / Push URL).
 git remote show origin
+# To undo (and erase) changes to your local branch that have been commited, use
+git reset --hard <hash code of commit to revert to // the real HEAD of master/origin>
+
 
 ###
 ### Maven
