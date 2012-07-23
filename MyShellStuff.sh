@@ -52,6 +52,13 @@ http://schacon.github.com/git/gitworkflows.html
 git branch <no arguments>
 # Find out which tags have been created in a repository
 git tag <no arguments>
+# Find information about the(potentially gold copy) remote's origin.  This 
+# will also list the URL it was taken from (Fetch URL / Push URL).
+git remote show origin
+# To undo (and erase) changes to your local branch that have been commited, use
+# the hashcode of the real HEAD (master/origin) commit to revert back to it.
+git reset --hard <hash code> 
+
 
 ###
 ### Maven
@@ -107,8 +114,14 @@ cat /etc/*-release
 ###
 ### SSH Stuff
 ###
-# Setup passwordless ssh for server A to server B
+# For the following examples assume the current user is a@A and a remote connection b@B is available
+# Setup passwordless ssh for user `a` (on host `A`) to server `B` using user account `b`
 a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
+# Setup an SSH tunnel for the current user to some host that server B can access.  With the
+# following a user will be able to access `localhost:8888` and be tunnelled through 
+# server B to <Some computer>:8080 .  A browser can now surf to `localhost:8888` 
+ssh -L 8888:<IP address of some computer B can access>:8080 b@B
+
 
 # Print the welcom/message of the day after you're already logged in
 cat /etc/issue
@@ -203,11 +216,13 @@ tail -n 37 <file name>
 # To follow the output
 tail -f <file name>
 
-# Create (zip) a tar archive of a directory, recursively
-# First cd to the parent directory of the target directory
-# Example
-# tar with gzip(-z), create an archive (-c), verbosely (-v) and give it a name (-f)
-tar -zcvf myArchiveOfDirectory.gz myDirecotry/
+# Create (zip) a tar archive of a directory, recursively.  First cd to the parent 
+# directory of the target directory.  My standard usage:
+# Create an archive (-c), verbosely (-v), using gzip (-z) and give it a name (-f)
+tar -cvzf <theArchive>.tar.gz <theFolderToArchive>
+# So, for example
+tar -cvzf myArchiveOfDirectory.gz myDirecotry/
+
 
 # Unzip tar file
 tar -xvf myFile.tar 
