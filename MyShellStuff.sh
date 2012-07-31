@@ -227,7 +227,7 @@ tar -cvzf myArchiveOfDirectory.gz myDirecotry/
 # Unzip tar file
 tar -xvf myFile.tar 
 # Unzip gzip file
-tar -xvfz myFile.tar.gz
+tar -xvzf myFile.tar.gz
 
 ###
 ### GREP! ( "Global Regular-Expression Print" )
