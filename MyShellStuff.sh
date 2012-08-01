@@ -53,11 +53,16 @@ git branch <no arguments>
 # Find out which tags have been created in a repository
 git tag <no arguments>
 # Find information about the(potentially gold copy) remote's origin.  This 
-# will also list the URL it was taken from (Fetch URL / Push URL).
+# will describe the URL used for fetching/pushing changes as well as which 
+# local branches are linked to remote tracking branches.
 git remote show origin
 # To undo (and erase) changes to your local branch that have been commited, use
-# the hashcode of the real HEAD (master/origin) commit to revert back to it.
+# the hashcode of the origin (or "real") HEAD (master/origin) commit to revert back to it.
 git reset --hard <hash code> 
+# As a shortcut you can accomplish this via the following (be sure to checkout the local master branch)
+git reset --hard origin/master
+# To see what's changed in your feature branch (assuming you carried over changes pulled into master)
+git log --graph origin/<feature branch name>..HEAD
 
 
 ###
