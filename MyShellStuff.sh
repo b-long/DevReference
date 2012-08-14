@@ -246,6 +246,8 @@ grep -nIre <RegEx> <Path>
 grep -nIre 192\.168\. *|grep -v \.log
 # Find some text in any file in a directory
 grep <text to find> /path/to/directory/*
+# Example searching for Exceptions in all log files
+grep -i Exception /my-server/logs/*
 
 # Grep processes and look for some term in the full command line
 # pgrep -fl <term>
