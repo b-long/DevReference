@@ -253,8 +253,10 @@ grep -i Exception /my-server/logs/*
 grep -nIrie url /my/server/webapps/ --include=\*.{java,js}
 # Search the current directory (and sub-directories) for the same file/pattern
 grep -nIrie url ./ --include=\*.{java,js}
-# Search only subdirectories of the current directory 
+# Search only subdirectories of the current directory for the same file/pattern
 grep -nIrie url * --include=\*.{java,js}
+# Search only the current directory for the same file/pattern
+grep -nIie url . --include=\*.{java,js}
 
 
 # Grep processes and look for some term in the full command line
