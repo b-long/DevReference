@@ -248,6 +248,14 @@ grep -nIre 192\.168\. *|grep -v \.log
 grep <text to find> /path/to/directory/*
 # Example searching for Exceptions in all log files
 grep -i Exception /my-server/logs/*
+# Search a specific directory, including all of it's subdirectories
+# for all java and javascript files containing the pattern "url"
+grep -nIrie url /my/server/webapps/ --include=\*.{java,js}
+# Search the current directory (and sub-directories) for the same file/pattern
+grep -nIrie url ./ --include=\*.{java,js}
+# Search only subdirectories of the current directory 
+grep -nIrie url * --include=\*.{java,js}
+
 
 # Grep processes and look for some term in the full command line
 # pgrep -fl <term>
