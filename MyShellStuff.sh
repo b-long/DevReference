@@ -237,7 +237,9 @@ tar -xvzf myFile.tar.gz
 ###
 ### GREP! ( "Global Regular-Expression Print" )
 ###
-# Bookmark http://www.regular-expressions.info
+# Bookmarks
+#   http://gskinner.com/RegExr/
+#   http://www.regular-expressions.info
 # Find some <pattern> and print the 5 lines after (-A) it.
 man grep | grep -A5 -- "-A"
 grep -nIre <RegEx> <Path>
