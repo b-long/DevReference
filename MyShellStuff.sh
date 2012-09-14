@@ -131,6 +131,9 @@ ssh -L 8888:<IP address of some computer B can access>:8080 b@B
 # Print the welcom/message of the day after you're already logged in
 cat /etc/issue
 
+###
+### GNU find
+### 
 # To find/locate a file in a directory
 find <directory> -iname "<case-insensitive filename>"
 # To find all the .war files in your current directory
@@ -140,6 +143,9 @@ find ./ -name "*.war"
 scp $(find . -name "*.war") user@qa-server:/srv/apache-tomcat-x.y.zz/webapps/
 # For example, searching from the root of the filesystem:
 find / -iname "hadoop"
+# find all the Java WAR files and copy them (copy file identified by "{}") and print 
+find . -iname "*.war" -exec cp {} $TOMCAT_HOME/webapps/ \; -print
+
 # Alternatively, locate which is based on a pre-built database
 locate "hadoop"
 
@@ -238,6 +244,7 @@ tar -xvzf myFile.tar.gz
 ### GREP! ( "Global Regular-Expression Print" )
 ###
 # Bookmarks
+#   http://www.catonmat.net/download/bash-redirections-cheat-sheet.pdf
 #   http://gskinner.com/RegExr/
 #   http://www.regular-expressions.info
 # Find some <pattern> and print the 5 lines after (-A) it.
