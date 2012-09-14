@@ -1,8 +1,8 @@
 # Oracle reference 
 
-## Backing up an Oracle instance (from a UNIX, Linux or POSIX machine)
+### Backing up an Oracle instance (from a UNIX, Linux or POSIX machine)
 
-#### In the terminal
+In the terminal
 ```shell
 # Prepare a place to create backups (optional)
 # Become the oracle user and change directories
@@ -15,13 +15,13 @@ mkdir myexport_1000rows
 # Connect as SYSDBA
 sqlplus / as sysdba
 ```
-## In sqlplus
+In sqlplus
 ```shell
 SQL> create directory myexport_1000rows as '/home/oracle/myexport_1000rows/';
 SQL> exit;
 ```
 
-## In the terminal
+In the terminal
 ```shell
 expdp db_admin_user DIRECTORY=myexport_1000rows DUMPFILE=myexport_1000rows.dmp SCHEMAS=db_admin_user
 
