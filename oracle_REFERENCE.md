@@ -39,11 +39,6 @@ Master table "DB_ADMIN_USER"."SYS_EXPORT_SCHEMA_01" successfully loaded/unloaded
 ******************************************************************************
 Dump file set for DB_ADMIN_USER.SYS_EXPORT_SCHEMA_01 is:
   /home/oracle/myexport_1000rows/db_admin_user_101964.dmp
-Job "DB_ADMIN_USER"."SYS_EXPORT_SCHEMA_01" completed with 1 error(s) at 18:34:15
-ORA-06502: PL/SQL: numeric or value error: character string buffer too small
-ORA-06512: at "SYS.DBMS_EXPORT_EXTENSION", line 270
-ORA-06512: at line 1
-ORA-06512: at "SYS.DBMS_METADATA", line 6300
 . . exported "DB_ADMIN_USER"."FOO"            71.90 MB   87420 rows
 ...
 ... # Clippped for brevi
@@ -52,7 +47,7 @@ Master table "DB_ADMIN_USER"."SYS_EXPORT_SCHEMA_01" successfully loaded/unloaded
 ******************************************************************************
 Dump file set for DB_ADMIN_USER.SYS_EXPORT_SCHEMA_01 is:
   /home/oracle/myexport_1000rows/db_admin_user_101964.dmp
-Job "DB_ADMIN_USER"."SYS_EXPORT_SCHEMA_01" completed with 1 error(s) at 08:34:15
+Job "DB_ADMIN_USER"."SYS_EXPORT_SCHEMA_01" completed ...
 
 
 # Afterward, you'll probably want to archive with tar:
