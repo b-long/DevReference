@@ -41,7 +41,7 @@ Dump file set for DB_ADMIN_USER.SYS_EXPORT_SCHEMA_01 is:
   /home/oracle/myexport_1000rows/db_admin_user_101964.dmp
 . . exported "DB_ADMIN_USER"."FOO"            71.90 MB   87420 rows
 ...
-... # Clippped for brevi
+... # Clippped for brevity
 ...
 Master table "DB_ADMIN_USER"."SYS_EXPORT_SCHEMA_01" successfully loaded/unloaded
 ******************************************************************************
