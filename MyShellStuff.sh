@@ -244,6 +244,7 @@ tar -xvzf myFile.tar.gz
 ### GREP! ( "Global Regular-Expression Print" )
 ###
 # Bookmarks
+#   http://www.catonmat.net/download/bash-redirections-cheat-sheet.pdf
 #   http://gskinner.com/RegExr/
 #   http://www.regular-expressions.info
 # Find some <pattern> and print the 5 lines after (-A) it.
