@@ -145,6 +145,10 @@ scp $(find . -name "*.war") user@qa-server:/srv/apache-tomcat-x.y.zz/webapps/
 find / -iname "hadoop"
 # find all the Java WAR files and copy them (copy file identified by "{}") and print 
 find . -iname "*.war" -exec cp {} $TOMCAT_HOME/webapps/ \; -print
+# find all of the files (following symbolic links) owned by the root user
+find -L -user root
+# find all of the files owned by root and change them to be owned by the tomcat user
+find -L -user root -exec chown tomcat:tomcat {} \;
 
 # Alternatively, locate which is based on a pre-built database
 locate "hadoop"
