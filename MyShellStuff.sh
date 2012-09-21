@@ -8,10 +8,16 @@
 # TODO: Consider extracting commands to their own file inside this project.  Then the project would serve as
 # a supplement to man and info pages
 
-### INFO
-# To quit --> Ctrl + x , Ctrl + c
-# It's better than man...
-info test
+###
+### INFO (Supplements "man" pages)
+###
+# Normal usage
+info <some command>
+# Info is displayed in an Emacs window, and uses Emacs navigation
+# To quit
+Ctrl + x , Ctrl + c
+# For more ... info...
+info info
 
 
 ###
