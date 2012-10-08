@@ -341,6 +341,7 @@ watch -n 1 ps aux \|grep jboss
 man signal
 man kill
 kill -s SIGHUP 29223
+\rm -rf log*/* work/* tmp/* # Cleanup JBoss
 
 ### 
 ### Bookmarks
