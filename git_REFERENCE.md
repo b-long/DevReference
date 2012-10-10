@@ -1,8 +1,14 @@
 # Git reference 
 
 ```shell
+# To create a local branch (first checkout the branch to.. branch from)
+git checkout -b <new branch name>
+
 # To delete a local branch
 git branch -d <local branch name>
+
+# To push a local branch (so it's tracked on the server)
+git push <remote> <new branch nam>  # i.e. git push origin mybranch
 
 # To add an entire directory:
 git add /directory/to/stage/*
