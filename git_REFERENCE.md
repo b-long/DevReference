@@ -31,6 +31,8 @@ git stash apply stash@{1}
 # When using `git fetch` , it's important to know you have to pull tags explicitly
 git fetch -t
 
+# See the history for a specific folder/path (using log2g alias and --name-status)
+git log2g --all --name-status -- ./my-widget/*
 
 
 ```
