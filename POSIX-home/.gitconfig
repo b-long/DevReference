@@ -6,7 +6,8 @@
         hist = "log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
         type = "cat-file -t"
         dump = "cat-file -p"
-
+        log2 = log --pretty=format:'%Cblue%h%Cred%d%Creset %ad %Cgreen%an%Creset %s'
+        log2g = log --pretty=format:'%Cblue%h%Cred%d%Creset %ad %Cgreen%an%Creset %s' --graph
 [color]
         ui = true
 
