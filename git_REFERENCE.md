@@ -36,4 +36,6 @@ git log2g --all --name-status -- ./my-widget/*
 
 
 ```
+
+More info available @ <a href="http://gitready.com/">git ready</a>.  See it's rep on GitHub too -> https://github.com/gitready/gitready
 <!-- Remember, ```` needs to be at the end of all the shell stuff -->
