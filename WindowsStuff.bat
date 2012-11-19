@@ -1,3 +1,7 @@
+
+:: Open the current directory in Windows Explorer (Cygwin or Windows Command Processor)
+explorer .
+
 :: In Subversion config, i.e. %APPDATA%\Subversion\config, -v is for verbose
 ssh = C:/Program Files/putty/plink.exe -v -i C:/cygwin/home/<username>/.ssh/putty.ppk -l <username>
 
@@ -58,3 +62,5 @@ REM       are equally valid.
 REM
 REM   To exit a batch script (but remain in the command proccessor): 
 exit /b 0
+
+:: Unix utilities (i.e. tee.exe) are provided in: http://sourceforge.net/projects/unxutils/
