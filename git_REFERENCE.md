@@ -10,6 +10,9 @@ git branch -d <local branch name>
 # To push a local branch (so it's tracked on the server)
 git push <remote> <new branch nam>  # i.e. git push origin mybranch
 
+# To view information about your remote branches
+git remote show origin 
+
 # To add an entire directory:
 git add /directory/to/stage/*
 
@@ -37,5 +40,5 @@ git log2g --all --name-status -- ./my-widget/*
 
 ```
 
-More info available @ <a href="http://gitready.com/">git ready</a>.  See it's rep on GitHub too -> https://github.com/gitready/gitready
+More info available at <a href="http://gitready.com/">git ready</a>.  See it's repo on GitHub too: https://github.com/gitready/gitready
 <!-- Remember, ```` needs to be at the end of all the shell stuff -->
