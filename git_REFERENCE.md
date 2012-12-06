@@ -10,6 +10,9 @@ git branch -d <local branch name>
 # To push a local branch (so it's tracked on the server)
 git push <remote> <new branch nam>  # i.e. git push origin mybranch
 
+# To delete a remote branch (so it's no longer on the server)
+git push <remote> :<branch to delete> # i.e. git push origin :mybranch
+
 # To view information about your remote branches
 git remote show origin 
 
