@@ -4,7 +4,7 @@
 
 ##### Exit emacs
 ```shell
-`C-x C-c`
+C-x C-c
 ```
 
 ##### Find (search) & replace string
