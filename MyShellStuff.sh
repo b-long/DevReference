@@ -9,6 +9,16 @@
 # a supplement to man and info pages
 
 ###
+### LESS
+###
+# Forward one page (Also known as "Page Down")
+f
+# Backward one page (Also known as "Page Up")
+b
+# Search
+/
+
+###
 ### INFO (Supplements "man" pages)
 ###
 # Normal usage
