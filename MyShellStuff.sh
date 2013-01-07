@@ -17,6 +17,10 @@ f
 b
 # Search
 /
+# Help (when viewing something in less, i.e. man pages)
+h
+# Additional info
+man less
 
 ###
 ### INFO (Supplements "man" pages)
