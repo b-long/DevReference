@@ -7,6 +7,7 @@ My normal usage:
 # Remember the `-c` option will calculate checksums for all files and is not usually needed.
 rsync -r -t -v --progress --ignore-existing --partial -i -s /tiny-storage/rsync-source /big-storage/rsync-destination
 ```
-<!-- Remember ```` needs to be at the end of shell segments 
-and real scripts should always end with a new line -->
+<!-- Remember ```` needs to be at the end of shell segments, per GitHub Flavored 
+Markdown ( http://github.github.com/github-flavored-markdown/ ) and real scripts 
+should always end with a new line -->
 
