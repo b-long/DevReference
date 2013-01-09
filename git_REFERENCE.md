@@ -1,5 +1,6 @@
 # Git reference 
 
+##### Standard workflow commands
 ```shell
 # To create a local branch (first checkout the branch to.. branch from)
 git checkout -b <new branch name>
@@ -43,5 +44,40 @@ git log2g --all --name-status -- ./my-widget/*
 
 ```
 
-More info available at <a href="http://gitready.com/">git ready</a>.  See it's repo on GitHub too: https://github.com/gitready/gitready
-<!-- Remember, ```` needs to be at the end of all the shell stuff -->
+##### Undo the last commit ([source](http://stackoverflow.com/a/927386/320399))
+This should only be done for commits that have not been pushed to the remote.
+```shell
+$ git commit ...              (1)
+$ git reset --soft HEAD^      (2)
+# edit (or unstage) files     (3)
+$ git add ....                (4)
+$ git commit -c ORIG_HEAD     (5)
+
+### 
+### Explanation of the above steps
+### 
+
+### (1) This is what you want to undo
+
+### (2) This is most often done when you remembered what you just committed is incomplete, 
+### or you misspelled your commit message, or both. Leaves working tree as it was before "reset".
+
+### (3) Make corrections to working tree files.
+
+### (4) Stage changes for commit.
+
+### "reset" copies the old head to .git/ORIG_HEAD; redo the commit by starting with its log message.
+### If you do not need to edit the message further, you can give -C option instead.
+
+```
+
+
+More info available at <a href="http://gitready.com/">git ready</a>.  See it's repo 
+on GitHub too: https://github.com/gitready/gitready 
+
+<!-- Remember ```` needs to be at the end of shell segments, per GitHub Flavored 
+Markdown ( http://github.github.com/github-flavored-markdown/ ) and real scripts 
+should always end with a new line -->
+
+
+
