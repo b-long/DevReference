@@ -16,8 +16,15 @@
 :set number!
 ```
 
- Go to line
+Moving around
 ```shell
+# Move to end of line
+$
+# Move to first non-whitespace character
+^
+# Move to the beginning of the line 
+0
+# Go to line
 :<line number> # Then hit enter/return
 ```
 
