@@ -26,6 +26,10 @@ $
 0
 # Go to line
 :<line number> # Then hit enter/return
+# Page down / scroll down (OSX)
+CTRL + f
+# Page up / scroll up (OSX)
+CTRL + b
 ```
 
 ##### Select all
