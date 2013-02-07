@@ -169,6 +169,8 @@ find . -iname "*.war" -exec cp {} $TOMCAT_HOME/webapps/ \; -print
 find -L -user root
 # find all of the files owned by root and change them to be owned by the tomcat user
 find -L -user root -exec chown tomcat:tomcat {} \;
+# find all of the PDF files, sort them (by full path name) & output to the screen and a log file
+find . -type f -iname "*.pdf" | sort | tee all_PDFs.log
 
 # Alternatively, locate which is based on a pre-built database
 locate "hadoop"
