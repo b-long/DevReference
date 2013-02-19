@@ -73,18 +73,18 @@ $ git commit -c ORIG_HEAD     (5)
 
 ##### Undo a mistake.
 ```shell
-# Say for example, you have the following repository and your feature is based on commit F:
-               A--B--C feature
-              /   
-     D---E---F---G master
-# After a bad rebase your feature branch is now based on commit G:
-                   A'--B'--C' feature
-                  /
-     D---E---F---G master
-# You can find your earlier state in the reflog
+### Say for example, you have the following repository and your feature is based on commit F:
+#               A--B--C feature
+#              /   
+#     D---E---F---G master
+### After a bad rebase your feature branch is now based on commit G:
+#                   A'--B'--C' feature
+#                  /
+#     D---E---F---G master
+#### You can find your earlier state in the reflog
 $ git reflog
-# The reflog will show you commit "C" (and "C'") with the commit message of C.
-# Your earlier state is simply the earlier point in the reflog with commit message of C.
+# The reflog will show you commit C and C' which will both have the same commit message.
+# Your earlier state is simply the earlier point in the reflog with commit C.
 # To restore it, simply reset:
 $ git reset --hard HEAD@{1} # // or the analogous commit hash
 
