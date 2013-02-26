@@ -93,7 +93,7 @@ $ git reset --hard origin/master
 # Oh no!  Everything gone!
 $ git reset --hard HEAD@{1}
 # Now everything is back to normal :)
-
+```
 
 More info available at <a href="http://gitready.com/">git ready</a>.  See it's repo 
 on GitHub too: https://github.com/gitready/gitready 
