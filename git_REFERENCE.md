@@ -32,8 +32,11 @@ git stash list
 # To apply the changes at the top of the stash (similar to pop)
 git stash apply
 
-# To apply a specific change set from the stash (i.e. index #2)
+# To apply a specific change set from the stash (i.e. the second thing stashed)
 git stash apply stash@{1}
+
+# To reverse those changes
+git stash show stash@{1} -p | git apply --reverse
 
 # When using `git fetch` , it's important to know you have to pull tags explicitly
 git fetch -t
