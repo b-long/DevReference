@@ -74,7 +74,7 @@ $ git commit -c ORIG_HEAD     (5)
 
 ```
 
-##### Undo a mistake.
+##### Undo a mistake (i.e. a bad rebase).
 ```shell
 ### Say for example, you have the following repository and your feature is based on commit F:
 #               A--B--C feature
@@ -84,12 +84,19 @@ $ git commit -c ORIG_HEAD     (5)
 #                   A'--B'--C' feature
 #                  /
 #     D---E---F---G master
+
+### Before you do anything, make a tag for your current state
+$ git tag PRE-UNDO-REBASE
+
 #### You can find your earlier state in the reflog
 $ git reflog
 # The reflog will show you commit C and C' which will both have the same commit message.
 # Your earlier state is simply the earlier point in the reflog with commit C.
-# To restore it, simply reset:
-$ git reset --hard HEAD@{1} # // or the analogous commit hash
+# To restore it, simply reset to the earlier HEAD pointer (with the appropriate index):
+$ git reset --hard HEAD@{5}
+
+### After you verify your state is correct, delete the tag
+$ git tag -d PRE-UNDO-REBASE
 
 ###  The same method can be used to restore from a bad reset
 $ git reset --hard origin/master 
