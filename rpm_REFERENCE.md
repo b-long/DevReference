@@ -1,6 +1,6 @@
 # RPM reference
 
-The following is assumed to be done INSIDE a shell w/ rpm support
+The following is assumed to be done inside a terminal w/ rpm support
 
 ##### Random notes
 ```shell
