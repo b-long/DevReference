@@ -1,6 +1,6 @@
 # RPM reference
 
-`The following is assumed to be done INSIDE a shell w/ rpm support`
+The following is assumed to be done INSIDE a shell w/ rpm support
 
 ##### Random notes
 ```shell
@@ -18,6 +18,7 @@ rpm -ev MySQL-client
 
 # Extract an RPM
 rpm2cpio ${RPM} | cpio -idmv
+
 # Extract a group of RPMs
 for F in $(ls *.rpm); do rpm2cpio ${F}|cpio -idmv; done
 ```
