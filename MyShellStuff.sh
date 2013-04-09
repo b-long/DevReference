@@ -132,7 +132,7 @@ shutdown 03:00 -h
 # To reboot
 reboot
 # Determine which version (distribution) of Linux you're using
-# This works for RedHat, Fedora, Scientifi OS, ... 
+# This works for RedHat, Fedora, Scientific Linux, CentOS, ... 
 cat /etc/*-release
 
 
