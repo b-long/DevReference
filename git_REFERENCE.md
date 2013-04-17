@@ -17,7 +17,10 @@ git push <remote> :<branch to delete> # i.e. git push origin :mybranch
 # To view information about your remote branches
 git remote show origin 
 
-# To add an entire directory:
+# Merge in a feature branch for testing without committing / fast-forwarding
+git merge <feature branch> --no-commit --no-ff
+
+# To add (stage) an entire directory:
 git add /directory/to/stage/*
 
 # To undo unstaged changes
@@ -45,6 +48,14 @@ git fetch -t
 git log2g --all --name-status -- ./my-widget/*
 
 
+```
+##### Update/change last commit message
+```shell
+$ git rebase -i HEAD~1                                    (1)
+# In the editor, select reword (r) on the last commit     (2)
+# Save and exit the editor                                (3)
+# Update the commit message in the new editor             (4)
+# Save and exit the editor                                (5)
 ```
 
 ##### Undo the last commit ([source](http://stackoverflow.com/a/927386/320399))
