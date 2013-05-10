@@ -17,6 +17,9 @@ git push <remote> :<branch to delete> # i.e. git push origin :mybranch
 # To view information about your remote branches
 git remote show origin 
 
+# Cleanup (remove) untracked files # via http://stackoverflow.com/a/64966/320399
+git clean -f
+
 # Merge in a feature branch for testing without committing / fast-forwarding
 git merge <feature branch> --no-commit --no-ff
 
