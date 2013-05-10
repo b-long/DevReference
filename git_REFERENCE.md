@@ -29,6 +29,17 @@ git add /directory/to/stage/*
 # To undo unstaged changes
 git chekout -- <file to undo>
 
+# When using `git fetch` , it's important to know you have to pull tags explicitly
+git fetch -t
+
+# See the history for a specific folder/path (using log2g alias and --name-status)
+git log2g --all --name-status -- ./my-widget/*
+
+```
+
+##### Stashing 
+```shell
+
 # To stash some changes with a description
 git stash save "Description of changes"
 
@@ -44,14 +55,12 @@ git stash apply stash@{1}
 # To reverse those changes
 git stash show stash@{1} -p | git apply --reverse
 
-# When using `git fetch` , it's important to know you have to pull tags explicitly
-git fetch -t
-
-# See the history for a specific folder/path (using log2g alias and --name-status)
-git log2g --all --name-status -- ./my-widget/*
-
+# To clear out things that are stashed
+git stash clear
 
 ```
+
+
 ##### Update/change last commit message
 ```shell
 $ git rebase -i HEAD~1                                    (1)
