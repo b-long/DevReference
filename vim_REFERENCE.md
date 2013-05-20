@@ -50,5 +50,9 @@ y
 <Escape> + p
 ```
 
+#### See also: 
+- http://tnerual.eriogerg.free.fr/vimqrc.html
+- http://www.tuxfiles.org/linuxhelp/vimcheat.html
+
 
 <!-- Remember, ```` needs to be at the end of all the shell stuff -->
