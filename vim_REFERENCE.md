@@ -6,17 +6,9 @@
 ```shell
 :q
 ```
-##### Turn on line numbers
-```shell
-:set number
-```
 
-##### Turn off line numbers
-```shell
-:set number!
-```
 
-Moving around
+##### Moving around
 ```shell
 # Move to end of line
 $
@@ -30,6 +22,14 @@ $
 CTRL + f
 # Page up / scroll up (OSX)
 CTRL + b
+```
+
+##### Line numbers
+```shell
+# Turn line numbers on
+:set number
+# Turn line numbers off
+:set number!
 ```
 
 ##### Select all
