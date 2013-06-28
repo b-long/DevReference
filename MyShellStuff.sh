@@ -142,10 +142,18 @@ cat /etc/*-release
 # For the following examples assume the current user is a@A and a remote connection b@B is available
 # Setup passwordless ssh for user `a` (on host `A`) to server `B` using user account `b`
 a@A:~> cat .ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
-# Setup an SSH tunnel for the current user to some host that server B can access.  With the
-# following a user will be able to access `localhost:8888` and be tunnelled through 
-# server B to <Some computer>:8080 .  A browser can now surf to `localhost:8888` 
-ssh -L 8888:<IP address of some computer B can access>:8080 b@B
+# Setup an SSH tunnel for the current user to some remote machine `C` that 
+# cannot be accessed directly from the current machine (`A`).  This allows
+# us to tunnel a connection from A to C, where C is a server B can access.  
+# This method can be used to access resources on any of the ports listening
+# on `C`, by mapping an available local port to it.  The flag "-L" can be used
+# multiple times to map such ports and the sytnax allows us to reference C 
+# by an IP address or hostname known to B.  In the example below we map 
+# ports 50001 and 50002 locally to port 22 and 80 respectively, allowing us 
+# to access C:80 (HTTP) and C:22 (SSH) which we couldn't normally access from A.  
+# The local machine will be able to browse to "http://localhost:50001" and open
+# an ssh connection to C by executing the command "ssh localhost -p 50002" .
+ssh -L 50001:<host name of C>:80 -L 50002:<IP address of C>:22  b@B
 
 
 # Print the welcom/message of the day after you're already logged in
