@@ -15,8 +15,12 @@
 f
 # Backward one page (Also known as "Page Up")
 b
-# Search
+# Search (Reg Ex)
 /
+# Make searching case-insensitive
+-i
+# Execute some command
+!<command> #For example !date
 # Help (when viewing something in less, i.e. man pages)
 h
 # Additional info
