@@ -3,7 +3,7 @@
 ##### Standard workflow commands
 <!-- 
 TODO: Add notes on git's lack of an "inherent 'upstream' or 'downstream'", and how working w/
-a distributed SCM is different than SCM systems like SVN / CVS.  Reference: http://stackoverflow.com/a/2749166/320399
+a distributed VCS is different than VCS/SCM systems like SVN / CVS.  Reference: http://stackoverflow.com/a/2749166/320399
 
 -->
 ```shell
