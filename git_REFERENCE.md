@@ -77,6 +77,10 @@ $ git rebase -i HEAD~1                                    (1)
 
 ##### Undo the last commit ([source](http://stackoverflow.com/a/927386/320399))
 This should only be done for commits that have not been pushed to the remote.
+<!-- 
+TODO: Create a section for undoing local commits and another describing
+the use of 'git revert' for commits that have been pushed to a remote.
+-->
 ```shell
 $ git commit ...              (1)
 $ git reset --soft HEAD^      (2)
