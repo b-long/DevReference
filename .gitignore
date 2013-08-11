@@ -1,1 +1,3 @@
 FileNeedingToBeIgnored.properties
+node_modules/
+temp/
