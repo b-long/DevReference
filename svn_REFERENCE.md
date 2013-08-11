@@ -25,6 +25,27 @@ svn update --set-depth infinity
 
 ```
 
+<!-- TODO: Add sectioin on locking, 
+e.g. 
+# Since MS Office files do not play well with SVN
+#
+# To configure SVN such that modifying a file requires the "lock" :
+vn propset svn:needs-lock '*' *
+
+# To configure all MS Excel documents in the current directory require locking:
+svn propset svn:needs-lock '*' *.xslx
+
+# To determine which files in the current directory require
+# the "lock" to perform edits: 
+svn propget svn:needs-lock *
+
+# To lock a file (for editing):
+svn lock foo.docx
+# To unlock the file (when finished):
+svn unlock foo.docx
+
+ -->
+
 <!-- Remember ```` needs to be at the end of shell segments, per GitHub Flavored 
 Markdown ( http://github.github.com/github-flavored-markdown/ ) and real scripts 
 should always end with a new line -->
