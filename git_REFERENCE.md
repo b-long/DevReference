@@ -48,6 +48,9 @@ git log2g --all --name-status -- ./my-widget/*
 # To stash some changes with a description
 git stash save "Description of changes"
 
+# To stash changes including untracked files
+git stash -k -u "Description of changes"
+
 # To list things saved in the stash
 git stash list
 
