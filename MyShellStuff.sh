@@ -7,6 +7,11 @@
 # 
 # TODO: Consider extracting commands to their own file inside this project.  Then the project would serve as
 # a supplement to man and info pages
+#
+# TODO: Add something about using 'xsltproc' and the fact that this REFERENCE is meant to
+# be generally applicapble to most *nix variants.
+# Example usage: xsltproc stylesheet.xsl document.xml # Output is the transformed document
+#
 
 ###
 ### LESS
