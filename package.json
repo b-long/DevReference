@@ -1,17 +1,24 @@
 {
-  "name": "devreference",
+  "name": "DevReference",
   "description": "An awesome developer reference built with RequireJS.",
   "version": "0.0.0",
   "engines": {
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt qunit"
+    "//": [
+	"^ A silly JSON comment practice...",
+	"Note: The 'scripts' tag is a bit of redundancy",
+	"in the context of using Grunt.  This configuration",
+	"tells NPM to execute 'grunt test' when you run",
+	"the command 'npm test' from this directory"
+    ],
+    "test": "grunt test"
   },
   "author": {
-    "name": "Author Name",
-    "email": "email@domain.com",
-    "url": "http://bower.io/"
+    "name": "b-long",
+    "email": "b-long@github.com",
+    "url": "https://github.com/b-long/DevReference"
   },
   "licenses": [
     {

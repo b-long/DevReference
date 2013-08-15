@@ -35,7 +35,16 @@ module.exports = function(grunt) {
       },
     },
     qunit: {
-      files: ['test/**/*.html']
+      // TODO: Tell Dan Heberden about this fix
+      files: ['test/*tests.js'],
+	all: {
+		options: {
+			urls: [ 
+				'http://localhost:8000/test/index.html'
+			]
+		}
+	}
+       
     },
     jshint: {
       gruntfile: {
@@ -87,6 +96,12 @@ module.exports = function(grunt) {
           keepalive: true,
         }
       },
+      server: {
+        options: {
+          port: 8000,
+          base: '.'
+        }
+      },
       production: {
         options: {
           keepalive: true,
@@ -120,8 +135,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'qunit', 'clean', 'requirejs', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'clean', 'requirejs', 'concat', 'uglify']);
+  // TODO: Fix this task
+  grunt.registerTask('test', ['qunit']);
   grunt.registerTask('preview', ['connect:development']);
   grunt.registerTask('preview-live', ['default', 'connect:production']);
+
 
 };
