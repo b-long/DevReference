@@ -7,11 +7,11 @@
   },
   "scripts": {
     "//": [
-	"^ A silly JSON comment practice...",
-	"Note: The 'scripts' tag is a bit of redundancy",
-	"in the context of using Grunt.  This configuration",
-	"tells NPM to execute 'grunt test' when you run",
-	"the command 'npm test' from this directory"
+      "^ A silly JSON comment practice...",
+      "Note: The 'scripts' tag is a bit of redundancy",
+      "in the context of using Grunt.  This configuration",
+      "tells NPM to execute 'grunt test' when you run",
+      "the command 'npm test' from this directory"
     ],
     "test": "grunt test"
   },
@@ -35,6 +35,7 @@
     "grunt-contrib-clean": "~0.4.0",
     "grunt": "~0.4.1",
     "grunt-contrib-requirejs": "~0.4.0",
-    "grunt-contrib-connect": "~0.3.0"
+    "grunt-contrib-connect": "~0.3.0",
+    "phantomjs": "~1.9.1-5"
   }
 }
