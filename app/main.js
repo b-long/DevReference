@@ -21,21 +21,21 @@ define(["jquery"], function($) {
 			copywrightAndHeading = ''+
 				'<h3>DevReference - Copywright '+
 				'<a href="' + linkToMyGithub + '">b-long</a> ' + 
-				currentYear + '</h3>';  // Copywright last updated 2013-08-27
+				currentYear + '</h3>';  // Copyswright last updated 2013-08-27
 		$mainDiv.append(copywrightAndHeading);
 
 		var libraryContents = '' +
 // TODO: Create this programmatically
 // Start the list
 '<ul id="files">' +
-'<li><a href="/library/MyShellStuff.sh" class="" title="MyShellStuff.sh">MyShellStuff.sh</a></li>' +
-'<li><a href="/library/emacs_REFERENCE.md" class="" title="emacs_REFERENCE.md">emacs_REFERENCE.md</a></li>' +
-'<li><a href="/library/git_REFERENCE.md" class="" title="git_REFERENCE.md">git_REFERENCE.md</a></li>' +
-'<li><a href="/library/oracle_REFERENCE.md" class="" title="oracle_REFERENCE.md">oracle_REFERENCE.md</a></li>' +
-'<li><a href="/library/rpm_REFERENCE.md" class="" title="rpm_REFERENCE.md">rpm_REFERENCE.md</a></li>' +
-'<li><a href="/library/rsync_REFERENCE.md" class="" title="rsync_REFERENCE.md">rsync_REFERENCE.md</a></li>' +
-'<li><a href="/library/svn_REFERENCE.md" class="" title="svn_REFERENCE.md">svn_REFERENCE.md</a></li>' +
-'<li><a href="/library/vim_REFERENCE.md" class="" title="vim_REFERENCE.md">vim_REFERENCE.md</a></li>' +
+'<li><a href="/DevReference/library/MyShellStuff.sh" class="" title="MyShellStuff.sh">MyShellStuff.sh</a></li>' +
+'<li><a href="/DevReference/library/emacs_REFERENCE.md" class="" title="emacs_REFERENCE.md">emacs_REFERENCE.md</a></li>' +
+'<li><a href="/DevReference/library/git_REFERENCE.md" class="" title="git_REFERENCE.md">git_REFERENCE.md</a></li>' +
+'<li><a href="/DevReference/library/oracle_REFERENCE.md" class="" title="oracle_REFERENCE.md">oracle_REFERENCE.md</a></li>' +
+'<li><a href="/DevReference/library/rpm_REFERENCE.md" class="" title="rpm_REFERENCE.md">rpm_REFERENCE.md</a></li>' +
+'<li><a href="/DevReference/library/rsync_REFERENCE.md" class="" title="rsync_REFERENCE.md">rsync_REFERENCE.md</a></li>' +
+'<li><a href="/DevReference/library/svn_REFERENCE.md" class="" title="svn_REFERENCE.md">svn_REFERENCE.md</a></li>' +
+'<li><a href="/DevReference/library/vim_REFERENCE.md" class="" title="vim_REFERENCE.md">vim_REFERENCE.md</a></li>' +
 // End the list
 '</ul>';
 		$mainDiv.append(libraryContents);
