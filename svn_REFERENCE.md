@@ -30,7 +30,7 @@ e.g.
 # Since MS Office files do not play well with SVN
 #
 # To configure SVN such that modifying a file requires the "lock" :
-vn propset svn:needs-lock '*' *
+svn propset svn:needs-lock '*' *
 
 # To configure all MS Excel documents in the current directory require locking:
 svn propset svn:needs-lock '*' *.xslx
