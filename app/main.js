@@ -19,7 +19,7 @@ define(["jquery"], function($) {
 			currentYear = new Date().getFullYear(),
 			linkToMyGithub = "http://github.com/b-long/",
 			copywrightAndHeading = ''+
-				'<h3>DevReference - Copywright '+
+				'<h3>DevReference - Copyright '+
 				'<a href="' + linkToMyGithub + '">b-long</a> ' + 
 				currentYear + '</h3>';  // Copyswright last updated 2013-08-27
 		$mainDiv.append(copywrightAndHeading);
