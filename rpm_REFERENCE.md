@@ -10,6 +10,9 @@ rpm -qlp <file name>.rpm
 # Install rpm
 rpm –ivh <file name>.rpm
 
+# Find out what depends on a package
+rpm --test -e <package name>
+
 # To uninstall software (verbosely) the RPM that was just installed.
 rpm -ev <file name>  ### Note, the extension is not included in this case
 
