@@ -20,6 +20,10 @@
 f
 # Backward one page (Also known as "Page Up")
 b
+# Go to the top of the buffer
+gg
+# Go to the end of the buffer
+G
 # Search (Reg Ex)
 /
 # Make searching case-insensitive
