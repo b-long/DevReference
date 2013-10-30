@@ -10,4 +10,7 @@
         log2g = log --pretty=format:'%Cblue%h%Cred%d%Creset %ad %Cgreen%an%Creset %s' --graph
 [color]
         ui = true
+[user]
+        email = b-long@users.noreply.github.com 
+        name = b-long
 
