@@ -1,6 +1,7 @@
 {
   "name": "DevReference",
   "description": "An awesome developer reference built with RequireJS.",
+  "homepage": "http://b-long.github.io/DevReference/",
   "version": "0.0.0",
   "engines": {
     "node": ">= 0.8.0"
@@ -17,8 +18,8 @@
   },
   "author": {
     "name": "b-long",
-    "email": "b-long@github.com",
-    "url": "https://github.com/b-long/DevReference"
+    "email": "b-long@users.noreply.github.com",
+    "url": "https://github.com/b-long/"
   },
   "licenses": [
     {
