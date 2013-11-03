@@ -1,8 +1,7 @@
 {
   "name": "devreference",
   "dependencies": {
-    "requirejs": "~2.1.5",
-    "jquery": ">= 1.8.0",
-    "qunit": "~1.11.0"
+    "requirejs": "~2.1.9",
+    "jquery": ">= 2.0.3"
   }
 }

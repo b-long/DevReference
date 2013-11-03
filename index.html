@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="An awesome developer reference built with RequireJS." />
+        <title>DevReference</title>
+        <!--
+            Is this supposed to be used for development only?  We have
+            another copy of the app in 'dist/DevReference.js'
+
+            The `data-main` attribute tells RequireJS to load app/config.js
+            after require.js loads.  For more information see:
+            http://requirejs.org/docs/start.html
+
+            Inside of main.js, you can use require() to load any other scripts
+            you need to run. This ensures a single entry point, since the
+            `data-main` script you specify is loaded asynchronously.
+            More info: http://requirejs.org/docs/api.html#data-main
+        -->
+        <script data-main="amd/config" src="bower_components/requirejs/require.js"></script>
+    </head>
+    <body>
+        <div id="devreference-main"></div>
+        <p><em>This site is powered by RequireJS.</em></p>
+    </body>
+</html>
