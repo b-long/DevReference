@@ -1,13 +1,15 @@
 # RPM reference
 
-The following is assumed to be done inside a terminal w/ rpm support
+The following is assumed to be done on a host that supports RPM
 
-##### Random notes
 ```shell
-# View contents of rpm
+# View RPM file contents
 rpm -qlp <file name>.rpm
 
-# Install rpm
+# View RPM package information
+cat <file name>.rpm | rpm -qip -
+
+# Install RPM
 rpm –ivh <file name>.rpm
 
 # Find out what depends on a package
