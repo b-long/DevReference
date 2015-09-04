@@ -13,4 +13,5 @@
 [user]
         email = b-long@users.noreply.github.com 
         name = b-long
-
+[core]
+        editor = vim
