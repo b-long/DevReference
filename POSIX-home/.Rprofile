@@ -1,0 +1,2 @@
+library(BiocInstaller)
+biocLite()
