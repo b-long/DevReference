@@ -15,3 +15,5 @@
         name = b-long
 [core]
         editor = vim
+[merge]
+	tool = kdiff3
