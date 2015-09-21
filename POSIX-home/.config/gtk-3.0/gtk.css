@@ -1,0 +1,24 @@
+/* 
+Because of a bug in the default Ubuntu theme, it's hard to see the difference in active terminal tabs.
+Until that bug is resolved, use the below CSS.
+
+Bug: 
+https://bugs.launchpad.net/ubuntu/+source/ubuntu-themes/+bug/762349
+
+Discussion on AskUbuntu: 
+http://askubuntu.com/questions/355297/gnome-terminal-tabs-no-contrast-between-active-and-inactive-tabs
+*/
+TerminalWindow,
+TerminalWindow.background {
+        background-color: #6e6e6e;
+        color: #000000;
+}
+
+TerminalWindow .notebook tab {
+        padding: 2;
+        background-color: #6e6e6e;
+}
+
+TerminalWindow .notebook tab:active {
+        background-color: #d1d1d1;
+}
