@@ -25,6 +25,28 @@ svn update --set-depth infinity
 
 ```
 
+##### Working with Bioconductor packages
+```
+# Convenience variables
+svn_remote=https://hedgehog.fhcrc.org/bioconductor/trunk/madman/Rpacks/BiocInstaller
+svn_clone=BiocInstaller
+
+# Get the latest revision of some sub-directory 
+svn info "$svn_remote" |grep Revision
+
+# Clone that revision to a subdirectory of the current folder
+git svn clone -r 109574 "$svn_remote" "$svn_clone"
+
+# cd to that folder
+cd "$svn_clone"
+
+# Something isn't right about this, so we need to remove some of the git-svn metadata
+rm -r .git/svn
+
+# Get the history of the directory (takes a while)
+git svn rebase
+```
+
 <!-- TODO: Add sectioin on locking, 
 e.g. 
 # Since MS Office files do not play well with SVN
@@ -45,9 +67,4 @@ svn lock foo.docx
 svn unlock foo.docx
 
  -->
-
-<!-- Remember ```` needs to be at the end of shell segments, per GitHub Flavored 
-Markdown ( http://github.github.com/github-flavored-markdown/ ) and real scripts 
-should always end with a new line -->
-
 
