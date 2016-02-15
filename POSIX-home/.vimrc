@@ -4,7 +4,7 @@ set history=700
 set autoread
 
 syntax on
-colorscheme elflord
+colorscheme darkblue
 
 "------ Console UI & Text display ------"
 set number 	" Automatically turn on line numbers
