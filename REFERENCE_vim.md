@@ -14,7 +14,7 @@
 $
 # Move to first non-whitespace character
 ^
-# Move to the beginning of the line 
+# Move to the beginning of the line
 0
 # Go to line
 :<line number> # Then hit enter/return
@@ -50,7 +50,7 @@ y
 <Escape> + p
 ```
 
-#### See also: 
+#### See also:
 - http://tnerual.eriogerg.free.fr/vimqrc.html
 - http://www.tuxfiles.org/linuxhelp/vimcheat.html
 
