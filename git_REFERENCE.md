@@ -1,7 +1,7 @@
-# Git reference 
+# Git reference
 
 ##### Standard workflow commands
-<!-- 
+<!--
 TODO: Add notes on git's lack of an "inherent 'upstream' or 'downstream'", and how working w/
 a distributed VCS is different than VCS/SCM systems like SVN / CVS.  Reference: http://stackoverflow.com/a/2749166/320399
 
@@ -20,7 +20,7 @@ git push <remote> <new branch nam>  # i.e. git push origin mybranch
 git push <remote> :<branch to delete> # i.e. git push origin :mybranch
 
 # To view information about your remote branches
-git remote show origin 
+git remote show origin
 
 # Cleanup (remove) untracked files # via http://stackoverflow.com/a/64966/320399
 git clean -f
@@ -42,7 +42,7 @@ git log2g --all --name-status -- ./my-widget/*
 
 ```
 
-##### Stashing 
+##### Stashing
 ```shell
 
 # To stash some changes with a description
@@ -80,7 +80,7 @@ $ git rebase -i HEAD~1                                    (1)
 
 ##### Undo the last commit ([source](http://stackoverflow.com/a/927386/320399))
 This should only be done for commits that have not been pushed to the remote.
-<!-- 
+<!--
 TODO: Create a section for undoing local commits and another describing
 the use of 'git revert' for commits that have been pushed to a remote.
 -->
@@ -91,13 +91,13 @@ $ git reset --soft HEAD^      (2)
 $ git add ....                (4)
 $ git commit -c ORIG_HEAD     (5)
 
-### 
+###
 ### Explanation of the above steps
-### 
+###
 
 ### (1) This is what you want to undo
 
-### (2) This is most often done when you remembered what you just committed is incomplete, 
+### (2) This is most often done when you remembered what you just committed is incomplete,
 ### or you misspelled your commit message, or both. Leaves working tree as it was before "reset".
 
 ### (3) Make corrections to working tree files.
@@ -134,18 +134,49 @@ $ git reset --hard HEAD@{5}
 $ git tag -d PRE-UNDO-REBASE
 
 ###  The same method can be used to restore from a bad reset
-$ git reset --hard origin/master 
+$ git reset --hard origin/master
 # Oh no!  Everything gone!
 $ git reset --hard HEAD@{1}
 # Now everything is back to normal :)
 ```
 
-More info available at <a href="http://gitready.com/">git ready</a>.  See it's repo 
-on GitHub too: https://github.com/gitready/gitready 
+More info available at <a href="http://gitready.com/">git ready</a>.  See it's repo
+on GitHub too: https://github.com/gitready/gitready
 
-<!-- Remember ```` needs to be at the end of shell segments, per GitHub Flavored 
-Markdown ( http://github.github.com/github-flavored-markdown/ ) and real scripts 
+<!-- Remember ```` needs to be at the end of shell segments, per GitHub Flavored
+Markdown ( http://github.github.com/github-flavored-markdown/ ) and real scripts
 should always end with a new line -->
 
 
+##### Scratch notes
+```
 
+# Commit all changes (modified files) with message <-m>
+git commit -a -m "Updated <something> with <some changes>"
+# Push updates to the server
+git push
+# Pull updates from the server
+git pull
+# Rename a file
+git mv OldFileName.css NewFileName.css
+# Don't forget to commit the changes...
+git commit -a -m "Renamed OldFileName.css to NewFileName.css"
+# Git workflows:
+http://schacon.github.com/git/gitworkflows.html
+# Find out what branch you're on
+git branch <no arguments>
+# Find out which tags have been created in a repository
+git tag <no arguments>
+# Find information about the(potentially gold copy) remote's origin.  This
+# will describe the URL used for fetching/pushing changes as well as which
+# local branches are linked to remote tracking branches.
+git remote show origin
+# To undo (and erase) changes to your local branch that have been commited, use
+# the hashcode of the origin (or "real") HEAD (master/origin) commit to revert back to it.
+git reset --hard <hash code>
+# As a shortcut you can accomplish this via the following (be sure to checkout the local master branch)
+git reset --hard origin/master
+# To see what's changed in your feature branch (assuming you carried over changes pulled into master)
+git log --graph origin/<feature branch name>..HEAD
+
+```
