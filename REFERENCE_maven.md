@@ -31,4 +31,9 @@ mvn integration-test
 mvn test -Dtest=**/*IT.java
 # Run 1 unit test
 mvn -Dtest=MyTest#someTestMethod test
+
+# Skip test execution
+-DskipTests
+# Skip test compilation step AND skip test execution
+-Dmaven.test.skip=true
 ```
