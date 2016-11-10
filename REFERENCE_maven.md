@@ -17,6 +17,10 @@ mvn -pl group:project-services -am install 2>&1 | tee build.log
 mvn dependency:resolve -Dclassifier=javadoc
 # Package this module and then scp the .war's to deploy on a jboss server
 mvn package && scp $(find . -name "*.war") <user>@<host name>:/srv/jboss-6.0.0/server/default/deploy/
+```
+
+##### Testing
+```shell
 # Clean & rebuild everything, then run 1 integration test class
 mvn -Dtest=MyTestIT verify
 # Since the maven lifecycle now contains an "integration-test" phase, it'll run before verify.
@@ -27,5 +31,4 @@ mvn integration-test
 mvn test -Dtest=**/*IT.java
 # Run 1 unit test
 mvn -Dtest=MyTest#someTestMethod test
-
 ```
