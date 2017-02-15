@@ -1,3 +1,7 @@
+REM This is a comment, so are  the lines below starting with `::`
+
+REM To print the current directory (e.g. `pwd` in *nix environments), you can do the following :
+echo %cd%
 
 :: Open the current directory in Windows Explorer (Cygwin or Windows Command Processor)
 explorer .
