@@ -2,11 +2,36 @@
 # ssh reference
 _Secure Shell_
 
+### Automating Authentication
+
+If you already have an RSA public/private key pair.  You can automate the authentication process by adding
+a local user's RSA public key to remote (server) user's `authorized_keys` file:
 ```shell
 
 # For the following examples assume the current user is a@A and a remote connection b@B is available
 # Setup passwordless ssh for user `a` (on host `A`) to server `B` using user account `b`
 a@A:~> cat ~/.ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
+```
+
+### Copying files over `ssh`
+This is known as `scp` or _secure copy_ :
+```
+# The usage syntax is scp <from> <to>
+scp something.txt user@<somehost>:/<somepath>/
+
+# The scp tool is also available in Cygwin:
+scp /cygdrive/c/<somepath>/*.war user@<somehost>:/<somepath>/
+
+# Perform multiple operations (i.e. moving things) after SSH'ing in
+# This example is specific to Jenkins (using $SVN_REVISION)
+ssh root@host.com "cd /root/myBuilds/; mkdir ${SVN_REVISION}; mv /root/myBuilds/temp/ /root/builds/${SVN_REVISION}/"
+
+# To recursively copy an entire directory:
+scp -r user@host:/path/directoryToCopy /cygdrive/c/windows-path/parentDestinationDirectory/
+```
+
+### Tunneling Traffic
+```
 # Setup an SSH tunnel for the current user to some remote machine `C` that
 # cannot be accessed directly from the current machine (`A`).  This allows
 # us to tunnel a connection from A to C, where C is a server B can access.  
@@ -19,24 +44,10 @@ a@A:~> cat ~/.ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
 # The local machine will be able to browse to "http://localhost:50001" and open
 # an ssh connection to C by executing the command "ssh localhost -p 50002" .
 ssh -L 50001:<host name of C>:80 -L 50002:<IP address of C>:22  b@B
+```
 
-
-# To secure copy (copy over ssh) use 'scp'
-# Remember, the syntax is scp <from> <to>
-scp /cygdrive/c/<somepath>/*.war root@<somehost>:/<somepath>/
-
-# Perform multiple operations (i.e. moving things) after SSH'ing in
-# This example is specific to Jenkins (using $SVN_REVISION)
-ssh root@host.com "cd /root/myBuilds/; mkdir ${SVN_REVISION}; mv /root/myBuilds/temp/ /root/builds/${SVN_REVISION}/"
-
-# To recursively copy an entire directory:
-scp -r user@host:/path/directoryToCopy /cygdrive/c/windows-path/parentDestinationDirectory/
-
-# Secure copy from a Cygwin path
-scp /cygdrive/c/<path-to-soruce>/myFile.txt <user>@<host>:/<destination path>/
-
-
-
+### Other examples
+```
 # Tar pipe a file from one place to another
 tar -c ./myFile.txt | ssh <user>@<host>:/destination/ tar -x
 # Can be used for entire directories as well
