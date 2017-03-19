@@ -12,6 +12,20 @@ a local user's RSA public key to remote (server) user's `authorized_keys` file:
 # Setup passwordless ssh for user `a` (on host `A`) to server `B` using user account `b`
 a@A:~> cat ~/.ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
 ```
+To use the identity, configure your authentication agent:
+```
+ssh-add
+```
+If you're using a `PEM` file for access ... 
+
+```
+ssh-add <path to PEM file>
+```
+
+To remove all keys from the agent
+```
+ssh-add -D
+```
 
 ### Copying files over `ssh`
 This is known as `scp` or _secure copy_ :
