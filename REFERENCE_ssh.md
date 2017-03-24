@@ -6,17 +6,21 @@ _Secure Shell_
 
 If you already have an RSA public/private key pair.  You can automate the authentication process by adding
 a local user's RSA public key to remote (server) user's `authorized_keys` file:
-```shell
-
-# For the following examples assume the current user is a@A and a remote connection b@B is available
-# Setup passwordless ssh for user `a` (on host `A`) to server `B` using user account `b`
-a@A:~> cat ~/.ssh/id_rsa.pub | ssh b@B 'cat >> .ssh/authorized_keys'
 ```
-To use the identity, configure your authentication agent:
+ssh-copy-id [-i [identity_file]] [-p port] [-o ssh_option] [user@]hostname
+```
+If `ssh-copy-id` is not available, you can add the public key the the old fashioned way:
+```shell
+# Setup passwordless SSH for account `user` on server `hostname`
+cat ~/.ssh/id_rsa.pub | ssh user@hostname 'cat >> .ssh/authorized_keys'
+```
+### Your `ssh` client's identity
+
+To configure your authentication agent with the default keypair:
 ```
 ssh-add
 ```
-If you're using a `PEM` file for access ... 
+A `PEM` file can also be used : 
 
 ```
 ssh-add <path to PEM file>
