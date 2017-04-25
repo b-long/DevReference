@@ -2,11 +2,14 @@
 # Grep reference
 _Global Regular-Expression Print_
 
+Grep for files with the `.rb` file extension ([source](http://stackoverflow.com/a/13335855/320399)):
+```
+ls -l | grep ".*\.rb$"
+```
+
+Other notes:
 ```shell
-# Bookmarks
-#   http://www.catonmat.net/download/bash-redirections-cheat-sheet.pdf
-#   http://gskinner.com/RegExr/
-#   http://www.regular-expressions.info
+
 # Find some <pattern> and print the 5 lines after (-A) it.
 man grep | grep -A5 -- "-A"
 grep -nIre <RegEx> <Path>
@@ -27,3 +30,8 @@ grep -nIrie url * --include=\*.{java,js}
 # Search only the current directory for the same file/pattern
 grep -nIie url . --include=\*.{java,js}
 ```
+
+#### Additional resources
+* http://www.catonmat.net/download/bash-redirections-cheat-sheet.pdf
+* http://gskinner.com/RegExr/
+* http://www.regular-expressions.info
