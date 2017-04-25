@@ -2,6 +2,11 @@
 # Grep reference
 _Global Regular-Expression Print_
 
+General usage: 
+```
+grep <RegEx pattern> <File or Path>
+```
+
 Grep for files with the `.rb` file extension ([source](http://stackoverflow.com/a/13335855/320399)):
 ```
 ls -l | grep ".*\.rb$"
@@ -12,7 +17,6 @@ Other notes:
 
 # Find some <pattern> and print the 5 lines after (-A) it.
 man grep | grep -A5 -- "-A"
-grep -nIre <RegEx> <Path>
 # Usage:
 # Pipe the output of looking for this pattern to grep and skip all the logs
 grep -nIre 192\.168\. *|grep -v \.log
