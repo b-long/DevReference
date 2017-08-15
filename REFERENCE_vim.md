@@ -1,6 +1,6 @@
 # Vim reference
 
-`The following is assumed to be done INSIDE the Vim editor`
+The following commands are assumed to be executed inside [Vim].
 
 ##### Exit vim
 ```shell
@@ -55,4 +55,4 @@ y
 - http://www.tuxfiles.org/linuxhelp/vimcheat.html
 
 
-<!-- Remember, ```` needs to be at the end of all the shell stuff -->
+[Vim]: https://vim.sourceforge.io/
