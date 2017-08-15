@@ -1,8 +1,10 @@
 # Creating a symlink
 
-The following creates a symlink from `link` to `foo` 
+To create a symbolic link, use the following command.  Replacing
+`source_file` with the name of the existing file:
 
 ```shell
-# Create a symbolic link
-ln -s foo link
+ln -s source_file myfile
 ```
+
+Source: https://kb.iu.edu/d/abbe
