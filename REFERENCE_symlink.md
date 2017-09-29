@@ -1,10 +1,9 @@
 # Creating a symlink
 
-To create a symbolic link, use the following command.  Replacing
-`source_file` with the name of the existing file:
+To create a symbolic link, use the following command (replacing the placeholders):
 
 ```shell
-ln -s source_file myfile
+ln -s existing_file link_to_create
 ```
 
-Source: https://kb.iu.edu/d/abbe
+For more information: https://kb.iu.edu/d/abbe
