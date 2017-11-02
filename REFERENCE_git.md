@@ -7,7 +7,22 @@ a distributed VCS is different than VCS/SCM systems like SVN / CVS.  Reference: 
 
 -->
 ```shell
-# To create a local branch (first checkout the branch to.. branch from)
+# To start, clone a repository (you only need to do this once)
+git clone <some git URL> 
+# An example
+git clone https://github.com/b-long/DevReference.git
+
+# Next, navigate into the repository
+cd DevReference
+
+# Next, access the branch you want to work with
+git checkout master
+
+# You can identify the branch you're on, just to double-check
+git branch
+
+# If you're starting new work, create a new branch.
+# Note, you are "branching off of" the current selection
 git checkout -b <new branch name>
 
 # To delete a local branch
