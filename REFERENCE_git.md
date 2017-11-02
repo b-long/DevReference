@@ -22,24 +22,42 @@ git push <remote> :<branch to delete> # i.e. git push origin :mybranch
 # To view information about your remote branches
 git remote show origin
 
-# Cleanup (remove) untracked files # via http://stackoverflow.com/a/64966/320399
-git clean -f
+# To prepare code that you want to commit, you have to tell 
+# git to "stage" the files.  You can stage files individually
+# or by directory.
+#
+# To stage a single file: 
+git add some-file.txt
 
-# Merge in a feature branch for testing without committing / fast-forwarding
-git merge <feature branch> --no-commit --no-ff
-
-# To add (stage) an entire directory:
+# To stage (add) an entire directory:
 git add /directory/to/stage/*
 
-# To undo unstaged changes
-git chekout -- <file to undo>
+# To un-stage some file
+git chekout -- <path-to-file>
 
-# When using `git fetch` , it's important to know you have to pull tags explicitly
+# Once files are added, you can commit them
+git commit -m "My awesome code"
+
+# Finally, push these changes to your server
+# Be it GitHub.com, GitLab.com BitBucket.org, or a private server
+#
+# Note <new branch name> is created above
+git push origin <new branch name>
+```
+
+##### Other git features
+```shell
+# When using `git fetch` , it's important to know you have to ask for tags explicitly
 git fetch -t
 
 # See the history for a specific folder/path (using log2g alias and --name-status)
 git log2g --all --name-status -- ./my-widget/*
 
+# Cleanup (remove) untracked files # via http://stackoverflow.com/a/64966/320399
+git clean -f
+
+# Merge in a feature branch for testing without committing / fast-forwarding
+git merge <feature branch> --no-commit --no-ff
 ```
 
 ##### Stashing
