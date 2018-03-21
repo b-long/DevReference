@@ -1,11 +1,22 @@
 # Git reference
 
-##### Standard workflow commands
 <!--
 TODO: Add notes on git's lack of an "inherent 'upstream' or 'downstream'", and how working w/
 a distributed VCS is different than VCS/SCM systems like SVN / CVS.  Reference: http://stackoverflow.com/a/2749166/320399
 
 -->
+##### Display the location of all Git settings
+```shell
+# Note: The following will display all settings
+my-computer:DevReference b-long$ git config --list --show-origin
+# Output omitted
+
+# Note: For brevity, I'm filtering the result set to a known quantity
+my-computer:DevReference b-long$ git config --list --show-origin |grep '(none)'
+file:.git/config	user.email=(none)
+```
+
+##### Standard workflow commands
 ```shell
 # To start, clone a repository (you only need to do this once)
 git clone <some git URL> 
