@@ -17,3 +17,6 @@
         editor = vim
 [merge]
 	tool = kdiff3
+[user]
+	email = (none)
+	name = b-long
