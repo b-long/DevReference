@@ -8,6 +8,14 @@
         dump = "cat-file -p"
         log2 = log --pretty=format:'%Cblue%h%Cred%d%Creset %ad %Cgreen%an%Creset %s'
         log2g = log --pretty=format:'%Cblue%h%Cred%d%Creset %ad %Cgreen%an%Creset %s' --graph
+	# The 'cleanup' deletes merged branches.  Source: https://stackoverflow.com/a/21857717/320399
+	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+        # The 'rbr' function performs a rebase against the "develop" branch
+	# Thanks to Alex Sexton for the info: https://twitter.com/SlexAxton/status/1308871555666059267
+	rbd = "pull --rebase origin develop"
+	rbm = "pull --rebase origin master"
+	# The 'addnows' adds all non-whitespace changes.  Source: https://stackoverflow.com/a/39489219
+	addnows = !git diff -U0 -w --no-color -- \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero "#"	
 [color]
         ui = true
 [user]
@@ -20,3 +28,5 @@
 [user]
 	email = (none)
 	name = b-long
+[init]
+	defaultBranch = main	
