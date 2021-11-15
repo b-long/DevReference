@@ -15,7 +15,10 @@
 	rbd = "pull --rebase origin develop"
 	rbm = "pull --rebase origin master"
 	# The 'addnows' adds all non-whitespace changes.  Source: https://stackoverflow.com/a/39489219
-	addnows = !git diff -U0 -w --no-color -- \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero "#"	
+	addnows = !git diff -U0 -w --no-color -- \"$@\" | git apply --cached --ignore-whitespace --unidiff-zero "#"
+	# Additionally, a quick tip to prevent pushing to some remote, you can run the following command:
+	#	git remote set-url --push upstream no_push
+	# Source: https://stackoverflow.com/questions/10260311/git-how-to-disable-push#comment105991272_10260389
 [color]
         ui = true
 [user]
