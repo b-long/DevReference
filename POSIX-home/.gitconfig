@@ -28,6 +28,8 @@
         editor = vim
 [merge]
 	tool = kdiff3
+[pull]
+	ff = only	
 [user]
 	email = (none)
 	name = b-long
