@@ -16,6 +16,23 @@ my-computer:DevReference b-long$ git config --list --show-origin |grep '(none)'
 file:.git/config	user.email=(none)
 ```
 
+##### Searching contents (git grep)
+You can use `git grep` to search the repository, and you can include/exclude
+specific file types ([source](https://stackoverflow.com/a/30084612/320399)).
+```shell
+# To include a single file type
+git grep 5431 -- ':!*.py'
+
+# To include context (-C) of five lines
+git grep -C 5 5431 -- '*.py'
+
+# To include multiple file types
+git grep 5431 -- '*.py' '*.toml'
+
+# To exclude multiple file types
+git grep 5431 -- ':!*.csv' ':!*.json' ':!*.lock'
+```
+
 ##### Standard workflow commands
 ```shell
 # To start, clone a repository (you only need to do this once)
