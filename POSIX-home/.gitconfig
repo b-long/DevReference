@@ -34,4 +34,7 @@
 	email = (none)
 	name = b-long
 [init]
-	defaultBranch = main	
+	defaultBranch = main
+# Source: https://twitter.com/JI/status/1546948817462800384        
+[push]
+	autoSetupRemote = true
